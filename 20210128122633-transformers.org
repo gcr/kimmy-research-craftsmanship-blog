@@ -1,0 +1,4 @@
+#+title: Transformers
+[[file:20210206161400-public_notes.org][Public Notes]]
+
+- [[file:20210208110416-needs_more_research.org][Needs More Research]] I should understand how [[file:20210128122633-transformers.org][Transformers]] work. See the google docs in [[id:CAC3907B-031D-42F8-86BA-85FF61706906][Andreas reading group]]. What are heads? What are attention maps?

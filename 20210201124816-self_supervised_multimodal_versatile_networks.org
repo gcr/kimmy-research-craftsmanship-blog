@@ -1,0 +1,4 @@
+#+title: Self-Supervised MultiModal Versatile Networks
+tag [[file:20210126165725-papers.org][Papers]], [[file:20210206161400-public_notes.org][Public Notes]]
+
+https://arxiv.org/abs/2006.16228

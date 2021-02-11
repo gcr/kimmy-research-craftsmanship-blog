@@ -1,0 +1,47 @@
+:PROPERTIES:
+:ID:       0649B00B-8183-484E-B024-F0F12806D196
+:END:
+#+title: Research journals
+#+roam_alias: "Lab Notebook"
+[[file:20210206161400-public_notes.org][Public Notes]]
+
+The *human-writable* part of your [[id:33013B29-EFA3-4A53-9E1C-8F7E222B9F82][Research Craftsmanship]] toolset. This is where you *strategically and tactically* plan for what experiments you want to run, what you learn from them, ...
+
+Each researcher might have their own different process. This is a [[file:20210206114824-creative_space.org][Creative Space]] where you can splat your ideas down, and then synthesize them into an understanding. But at the same time, there also needs to be a sense of professionalism and structure. (Maybe "creative space" is best for the whiteboard?)
+
+Keeping good research journals is super important. In the hard sciences, it can be required!
+
+Andrej Karpathy talks about this in his [[https://cs231n.github.io/neural-networks-3/#baby][blog post]] about babysitting the learning process.
+
+Within your research journal, you should have a way to *liberally and frequently refer to concrete experiment outcomes*. The short tags in [[id:1EE8FB3B-F9FD-422F-92C9-2F5814A77695][Experiment journals]] are for exactly this. Whether a hash, a datestamp, or an [[file:20210206115017-xmanager.org][XManager]] experiment ID, /keeping machine-readable references to your experiment data/ will help you be more precise later.
+
+* Goals
+- Synthesize and interpret and understand results.
+- Clarifying your own understanding of the problem domain for yourself
+- Serve as a discussion platform for teammates to further refine the design
+- Providing enough context for your future self to quickly page-in and [[file:20210206115549-sending_notes_to_yourself_in_the_future.org][revisit]] these ideas later
+- ...
+
+* Non-goals
+- Be a comprehensive repository for experiment results. (This should be the duty of your [[id:1EE8FB3B-F9FD-422F-92C9-2F5814A77695][Experiment journals]])
+- Communicate to others outside the team. (Presentations are for that)
+- Be independently understandable by a person with no background in the project. (Presentations are for that.)
+- ...
+
+* Implementations
+:PROPERTIES:
+:ID:       9CC1FCE1-E53C-4604-B939-F315BA32B7B4
+:END:
+- [[file:20210206114611-burritto_paper_phillip_guo.org][Burritto paper (Phillip Guo)]]
+- LaTeX
+- Google Docs?
+
+* Examples of good research notebooks
+- The Wikipedia [[https://en.wikipedia.org/wiki/Lab_notebook][lab notebook article]] has good examples from e.g. Alexander Graham Bell
+
+- within google, a good example is [[https://docs.google.com/document/d/1hcvVd9MEMRVTEeJLPTmzjXGRa-PuOFU_h4xaTVnx4pw/edit#heading=h.1hlu8wfq5x81][Effect of Non-Identical Data in Federated Learning]]
+
+* Alternatives Considered
+** Meetings and chat logs
+** The whiteboard
+** Just keep it in your head

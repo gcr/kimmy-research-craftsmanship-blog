@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       6156D5E7-C2AF-4DBC-882D-6CEA2DD37F7E
+:END:
+#+title: Multi-scale transformer language model
+tag: [[file:20210126165725-papers.org][Papers]], [[file:20210127090020-andreas_reading_group.org][Andreas reading group]], [[file:20210128122633-transformers.org][Transformers]], [[file:20210206161400-public_notes.org][Public Notes]]
+
+https://arxiv.org/pdf/2005.00581.pdf
+
+: We investigate multi-scale transformer language models that learn representations of text at multiple scales, and present three different architectures that have an inductive bias to handle the hierarchical nature of language. Experiments on large-scale language modeling benchmarks empirically demonstrate favorable likelihood vs memory footprint trade-offs, e.g. we show that it is possible to train a hierarchical variant with 30 layers that has 23% smaller memory footprint and better perplexity, compared to a vanilla transformer with less than half the number of layers, on the Toronto BookCorpus. We analyze the advantages of learned representations at multiple scales in terms of memory footprint, compute time, and perplexity, which are particularly appealing given the quadratic scaling of transformers' run time and memory usage with respect to sequence length.

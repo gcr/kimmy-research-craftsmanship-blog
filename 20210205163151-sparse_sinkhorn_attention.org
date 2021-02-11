@@ -1,0 +1,11 @@
+#+title: Sparse Sinkhorn Attention
+[[file:20210206161400-public_notes.org][Public Notes]]
+[[file:20210126165725-papers.org][Papers]], [[file:20210128122633-transformers.org][Transformers]], [[file:20210201124149-efficient_transformers.org][Efficient Transformers]]
+
+[[file:20210205100226-this_week_s_paper.org][This Week's Paper]]
+
+https://arxiv.org/abs/2002.11296
+
+Uses the magic [[file:20210204112740-sinkhorn_knopp_algorithm.org][Sinkhorn-Knopp Algorithm]] in the context of attention!
+
+* READ Also see the [[https://www.pragmatic.ml/sparse-sinkhorn-attention/][blog post]]

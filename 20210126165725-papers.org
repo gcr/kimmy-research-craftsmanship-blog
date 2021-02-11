@@ -1,0 +1,7 @@
+#+title: Papers
+[[file:20210206161400-public_notes.org][Public Notes]]
+
+See backlinks!
+- Also see [[file:20210127102931-papers_inspired_by_the_hard_sciences.org][Papers inspired by the hard sciences]]
+- Also see [[file:20210127090020-andreas_reading_group.org][Andreas reading group]]
+- Other papers from the [[https://sites.google.com/a/google.com/sound-understanding/reading-group][Sound Understanding reading group]]

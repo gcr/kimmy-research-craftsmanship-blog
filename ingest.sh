@@ -13,7 +13,7 @@ TARGET_DIRECTORY="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pw
 
 cd "$TARGET_DIRECTORY"
 
-TAG=FE242E93-E6CE-4E62-BF5C-825AC318456C
+TAG=20210206161400-public_notes.org
 
 rem " -- git pull"
 git pull

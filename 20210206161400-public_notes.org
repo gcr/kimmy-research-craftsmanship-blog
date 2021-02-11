@@ -1,0 +1,11 @@
+#+title: Public Notes
+[[file:20210206161400-public_notes.org][Public Notes]]
+
+This tag marks the notes that I consider to be consistent with Google's employee communications policy regarding posts to public blogs.
+
+Only notes bearing this tag will be marked for export.
+
+- *Do NOT add this tag to notes that are Confidential or Need-to-know*
+- *Do NOT add this tag to notes that reference internal information.*
+
+Internal users, see the pubapproval FAQ (grep for "blog"). I believe this blog falls under the "Potential exceptions" number 2.

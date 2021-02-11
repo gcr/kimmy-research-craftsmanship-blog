@@ -1,0 +1,3 @@
+#+title: Hammon-driven Development (Rich Hickey)
+[[file:20210206161400-public_notes.org][Public Notes]]
+Related to [[id:33013B29-EFA3-4A53-9E1C-8F7E222B9F82][Research Craftsmanship]]

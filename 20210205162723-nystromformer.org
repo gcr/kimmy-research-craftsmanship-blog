@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       967B814E-DB6A-4E9A-9121-32C3B35445F5
+:END:
+#+title: Nystromformer
+[[file:20210126165725-papers.org][Papers]], [[file:20210128122633-transformers.org][Transformers]], [[file:20210201124149-efficient_transformers.org][Efficient Transformers]], [[file:20210206161400-public_notes.org][Public Notes]]
+http://pages.cs.wisc.edu/~yunyang/nystromformer.pdf
+
+so [[file:20210126134100-huisheng.org][Huisheng]] mentioned that this work by [[file:20210128122712-yunyang_xiong.org][Yunyang Xiong]] is about how to approximate the quadratic term of [[file:20210128122633-transformers.org][Transformers]] with linear algebra.

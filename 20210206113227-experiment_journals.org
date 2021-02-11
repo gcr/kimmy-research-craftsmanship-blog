@@ -1,0 +1,63 @@
+:PROPERTIES:
+:ID:       1EE8FB3B-F9FD-422F-92C9-2F5814A77695
+:END:
+#+title: Experiment journals
+[[file:20210206161400-public_notes.org][Public Notes]]
+
+The *machine-writable/readable* data store of your [[id:33013B29-EFA3-4A53-9E1C-8F7E222B9F82][Research Craftsmanship]] toolset.
+
+This tool works in natural collaboration with your [[file:20210206112308-research_journalss.org][Research journals]]: just as you need a [[file:20210206114824-creative_space.org][Creative Space]] to write what you want to do and how you think it will work, your experiment [[file:20210204133357-infrastructure.org][Infrastructure]] needs a place to put the machine-relevant details of the mechanics of your experiments and their concrete, quantitative outcomes.
+
+You don't want to confuse the two. [[id:0649B00B-8183-484E-B024-F0F12806D196][Research journals]] are *creative spaces for exploration and planning and synthesis of results*, experiment journals are *spaces for archival and storage, the accumulating library of artifacts for later reference.*
+
+* Goals
+- Saves a comprehensive collection of experiments and their associated data.
+- Summarize results.
+- Quickly provide insight on what works and what doesn't.
+
+* Non-goals
+- A place for planning experiments and strategy
+- Contain too much writing/fiddling/thought dumps ("graduate student descent")
+
+* Good experiment journals should be:
+- *Immutable:* when an experiment happens, its data should never be changed again.
+- *Indexable*: each run of each experiment should be associated with a short globally unique tag.
+  - *Automatic:* you should not necessarily have to choose an explicit name for a run. The important part is *referring* to existing runs, not *deciding* what you changed up front, because outcomes of a run might change in hindsight as you come to understand the problem space better.
+    This avoids the *-final-final-copy-version2-final* effect, where often times researchers pick a tag to refer to a run based on *what they recently changed* rather than *what the run actually captures.*
+- *Insightful*: you need tools that can understand and summarize results across shittons of hyperparameter searches.
+  - Facebook's [[file:20210206113608-hiplot.org][HiPlot does this really well.]]
+- *Comprehensive:* ideally your storage should store everything needed to quickly reproduce a result.
+
+* Implementations
+:PROPERTIES:
+:ID:       BF814E31-4A2B-4335-B1F4-804F400E8E13
+:END:
+- I had begun to think about this a little in my [[https://github.com/gcr/lab-workbook][lab-workbook]] repository, then calcified into my [[id:F4A34819-C297-49F0-BAA2-FD1E6404AB73][google sheets job queue]]
+- [[file:20210206115017-xmanager.org][XManager]]
+- maybe [[file:20210206114611-burritto_paper_phillip_guo.org][Burritto paper (Phillip Guo)]] does this
+
+* Alternatives considered
+** The paragraph
+:PROPERTIES:
+:ID:       1CAF1D0B-CBEA-4083-9A23-56C0ADC7CF90
+:END:
+"Trying XYZ gave performance improvement of 5%."
+
+- *Lack of context:* Performance improvement compared to /what/? What was XYZ
+- *Not an overview/summary:* prose is harder to skim than a table or graph.
+
+ When you're doing [[file:20210206115228-technical_writing.org][Technical Writing]], you're really packaging your results and ideas into an easily-digestible format, kind of like a Protobuf for other humans. Think of [[file:20210206115549-sending_notes_to_yourself_in_the_future.org][Notetaking as forwarding ideas to your future self]]. This can be helpful when communicating ideas to others, but outputs of runs should be *machine-readable first*, so you can interpret them in new ways.
+
+ *The paragraph conflates the purpose of the experiment journal with that of the [[id:0649B00B-8183-484E-B024-F0F12806D196][Research journals]].*
+
+** Copy+pasting from stdout
+- The only data you get from this is the single metric at the end.
+- When you do this, you're assuming that *the context of your outcome will never change since you will never need to reinterpret this result.* This is an extremely strong assumption to make when you're just starting to explore a new domain
+
+- Further, like the paragraph above, you assume that *your understanding of capturing the input parameter space is perfect.* If you changed the learning rate for this experiment but then later change the batch size in a forgotten future version of the code, you won't able to understand what the differences are.
+
+You need a system that's able to let you ask novel questions later, like
+- *Questions about the process behind the result*: perhaps two experiments have similar results but very different loss curves!
+- *Questions about assumptions of inputs/hyperparameters:* What if the result happens because of a latent variable that you didn't notice?
+
+** Just keeping it in your head

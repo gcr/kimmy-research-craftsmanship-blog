@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       33013B29-EFA3-4A53-9E1C-8F7E222B9F82
+:END:
+#+title: Research Craftsmanship
+[[file:20210206161400-public_notes.org][Public Notes]]
+
+I want to make a handbook for researchers, similar to the [[file:20210206112529-sre_book.org][SRE book]], that talks about research as a craft.
+
+Want to make a handbook similar to [[file:20210204111537-sreedu.org][SREEDU]] and the [[file:20210206112529-sre_book.org][SRE book]] for the [[file:20210202193207-research_work_unit.org][Research workplace unit]]
+
+  - [ ] what would an [[file:20210204111537-sreedu.org][SREEDU]] for research look like?
+  - [ ] Good examples of [[file:20210206112308-research_journalss.org][research journals]]
+  - [ ] Rich Hickey has some examples of research. [[file:20210206112600-couch_driven_research.org][Hammon-driven Development (Rich Hickey)]]

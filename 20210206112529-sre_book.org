@@ -1,0 +1,2 @@
+#+title: SRE book
+[[file:20210206161400-public_notes.org][Public Notes]]

@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       CAC3907B-031D-42F8-86BA-85FF61706906
+:END:
+#+title: Andreas reading group
+[[file:20210206161400-public_notes.org][Public Notes]]
+
+https://docs.google.com/document/d/1EJxMeqJEMWXMbElEWtYDvCkw__k8xjxFA9IbESNfJg8/edit
+
+Interesting [[file:20210126165725-papers.org][Papers]] to read.
+
+ALso see [[file:20210127102931-papers_inspired_by_the_hard_sciences.org][Papers inspired by the hard sciences]]
+
+- [[file:20210127095517-mixmatch.org][MixMatch]]: very similar to SWaV
+- <2021-01-27 Wed> [[file:20210126165853-swav.org][SWaV]]

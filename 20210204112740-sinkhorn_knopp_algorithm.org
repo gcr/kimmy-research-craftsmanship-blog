@@ -1,0 +1,27 @@
+#+title: Sinkhorn-Knopp Algorithm
+#+roam_alias: "Vodka Algorithm"
+[[file:20210206161400-public_notes.org][Public Notes]]
+
+Used very heavily in the [[file:20210126165853-swav.org][SWaV]] paper.
+
+- The *secret sauce* lies in how they assign prototype comparison codes to clusters. Their magic +Vodka+ *Sinkhorn-Knopp* algorithm works by alternating between normalizing rows and columns of the cluster assignment matrix (Q, rows correspond to training examples and columns correspond to C prototype/proxy/anchor assignments).
+  Normalizing *rows* means that the comparison is a probability distribution
+  Normalizing *columns* makes sure that each prototype is represented by something in the batch.
+  You can just repeat this 3 times or so, which usually (always?) converges to a good soft clustering.
+
+Pseudocode from Appendix A.1 of their paper:
+#+BEGIN_SRC python
+# Sinkhorn-Knopp
+def sinkhorn(scores, eps=0.05, niters=3):
+   Q = exp(scores / eps).T
+   Q /= sum(Q)
+   K, B = Q.shape
+   # r,c are normalization constants that trade
+   # off the importance of normalizing
+   # rows or columns. Important for non-square Q.
+   u, r, c = zeros(K), ones(K) / K, ones(B) / B
+   for _ in range(niters):
+      Q *= (r / sum(Q, dim=1)).unsqueeze(1)
+      Q *= (c / sum(Q, dim=0)).unsqueeze(0)
+   return (Q / sum(Q, dim=0, keepdim=True)).T
+   #+END_SRC

@@ -1,0 +1,4 @@
+#+title: Pseudo-Labels
+[[file:20210206161400-public_notes.org][Public Notes]], [[id:5D9B7C82-5E1A-4BAF-8C88-4A2C7ECF2A8C][This Week's Paper]], [[file:20210126165725-papers.org][Papers]]
+
+Dong-Hyun Lee. Pseudo-label: The simple and efficient semi-supervised learning method for deep neural networks. In ICML Workshop on Challenges in Representation Learning, 2013.

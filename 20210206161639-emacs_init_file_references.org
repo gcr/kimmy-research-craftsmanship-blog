@@ -1,0 +1,1347 @@
+#+title: Emacs init file references
+[[file:20210206161400-public_notes.org][Public Notes]]
+
+#+BEGIN_SRC elisp
+
+;;; -*- eval: (progn (hs-minor-mode) (evil-close-folds)) -*-
+
+(progn "Initialize package-system..."
+       (require 'package)
+       (setq package-archives
+             '(("org"     .       "https://orgmode.org/elpa/")
+               ("gnu"     .       "https://elpa.gnu.org/packages/")
+               ("melpa"   .       "https://melpa.org/packages/")))
+       (package-initialize)
+
+       ;; Use-package for civilized configuration
+       (unless (package-installed-p 'use-package)
+         (package-refresh-contents)
+         (package-install 'use-package))
+       (require 'use-package)
+       (setq use-package-always-ensure t))
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(auto-save-file-name-transforms '((".*" "~/.emacs-temp/\\1" t)))
+ '(backup-directory-alist '((".*" . "~/.emacs-temp/")))
+ '(browse-url-browser-function 'browse-url-generic)
+ '(current-language-environment "UTF-8")
+ '(doc-view-resolution 200)
+ '(eshell-buffer-shorthand t)
+ '(evil-search-module 'isearch)
+ '(evil-snipe-repeat-keys nil)
+ '(evil-snipe-smart-case t)
+ '(evil-want-C-d-scroll nil)
+ '(evil-want-C-u-scroll nil)
+ '(flycheck-indication-mode 'left-fringe)
+ '(haskell-mode-hook
+   '(turn-on-haskell-indent turn-on-haskell-indentation turn-on-font-lock))
+ '(helm-external-programs-associations
+   '(("pptx" . "loimpress")
+     ("pdf" . "open")
+     ("odp" . "loimpress")))
+ '(ido-enable-tramp-completion t)
+ '(ido-enter-matching-directory 'only)
+ '(ido-use-filename-at-point 'guess)
+ '(inhibit-startup-screen nil)
+ '(js2-auto-indent-p t)
+ '(js2-basic-offset 2)
+ '(js2-bounce-indent-p t)
+ '(js2-cleanup-whitespace t)
+ '(js2-enter-indents-newline t)
+ '(js2-highlight-level 3)
+ '(js2-mirror-mode nil)
+ '(magit-use-overlays nil)
+ '(markdown-hr-length 5)
+ '(max-mini-window-height 0.5)
+ '(nxml-sexp-element-flag t)
+ '(nxml-slash-auto-complete-flag t)
+ '(org-startup-indented t)
+ '(package-selected-packages
+   '(company-statistics delve-minor-mode delve lister quelpa-use-package quelpa counsel ivy olivetti impatient-mode org-roam-server org-ehtml anki-editor direnv pocket-reader deft org-roam helm-ls-git helm-rg helm-cmd-t cmake-mode livescript-mode dumb-jump evil-magit evil-collection org-bullets ewal-spacemacs-themes spacemacs-theme org-superstar evil-surround org-rich-yank evil-indent-plus delight moe-theme helm lua-mode markdown-mode emmet-mode rainbow-mode web-mode auctex coffee-mode js2-mode magit company ace-jump-mode evil use-package))
+ '(safe-local-variable-values '((eval progn (hs-minor-mode) (evil-close-folds))))
+ '(send-mail-function 'sendmail-send-it))
+
+;; (custom-set-faces
+;;  ;; custom-set-faces was added by Custom.
+;;  ;; If you edit it by hand, you could mess it up, so be careful.
+;;  ;; Your init file should contain only one such instance.
+;;  ;; If there is more than one, they won't work right.
+;;  '(default ((t (:height 240 :family "PragmataPro Nerd Font")))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:height 240 :family "PragmataPro Nerd Font"))))
+ '(avy-background-face ((t (:foreground "gray80"))))
+ '(avy-goto-char-timer-face ((t (:background "pale violet red" :foreground "white"))))
+ '(avy-lead-face ((t (:background "#ff6644" :foreground "#fff"))))
+ '(avy-lead-face-0 ((t (:background "#ff6644" :foreground "#fff"))))
+ '(avy-lead-face-1 ((t (:background "#ff6644" :foreground "#faa"))))
+ '(evil-snipe-matches-face ((t (:background "dark salmon" :foreground "white"))))
+ '(highlight ((t (:background "dark salmon" :foreground "gray100"))))
+ '(lazy-highlight ((t (:inherit highlight :background "dark salmon"))))
+ '(org-drawer ((t (:foreground "#facba5")))))
+
+(use-package evil
+  :demand t
+  :init ;; tweak evil's configuration before loading it
+  (setq evil-search-module 'isearch ;;'evil-search
+        evil-ex-complete-emacs-commands nil
+        evil-vsplit-window-right t
+        evil-split-window-below t
+        evil-shift-round nil
+        evil-want-C-u-scroll t
+        evil-normal-state-tag (propertize "N" 'face '())
+        evil-emacs-state-tag  (propertize "E" 'face '((:inverse-video t)))
+        evil-insert-state-tag (propertize "I" 'face '((:inverse-video t)))
+        evil-motion-state-tag (propertize "M" 'face '())
+        evil-visual-state-tag (propertize "V" 'face '())
+        evil-operator-state-tag (propertize "O" 'face '())
+        evil-cross-lines t
+        evil-want-C-w-in-emacs-state t
+        )
+  (setq-default evil-symbol-word-search t)
+
+  :config
+  (evil-mode)
+
+  (evil-ex-define-cmd "wq" 'evil-write)
+  (evil-ex-define-cmd "q[uit]" 'evil-delete-buffer)
+  (evil-ex-define-cmd "qa[ll]" nil)
+  (evil-ex-define-cmd "wqa[ll]" 'evil-write)
+  (evil-ex-define-cmd "x[it]" 'evil-write)
+
+  (defun unfill-region (beg end)
+    "Unfill the region, joining text paragraphs into a single
+ logical line. This is useful, e.g., for use with
+ `visual-line-mode'."
+    (interactive "*r")
+    (let ((fill-column (point-max)))
+      (fill-region beg end)))
+
+  (evil-define-key 'normal comint-mode-map
+    "0" 'comint-bol
+    ;; "dd" "0D"
+    ;; "cc" "0C"
+    "M-d" 'comint-bol
+    "I" "0i"
+    (kbd "RET") 'comint-send-input)
+  (evil-define-key 'insert comint-mode-map
+    (kbd "M-c") 'comint-previous-input
+    (kbd "M-m") 'comint-previous-matching-input-from-input
+    (kbd "M-w") 'comint-next-matching-input-from-input
+    (kbd "M-t") 'comint-next-input
+    (kbd "M-d") 'comint-bol
+    (kbd "M-D") 'move-end-of-line
+    (kbd "RET") 'comint-send-input)
+
+  :bind
+  (:map evil-normal-state-map
+        ("ga" . 'org-agenda)
+        ;;("|" . 'org-agenda-list)
+        ("|" . 'counsel-imenu)
+        ("gh" . 'ivy-resume)
+        ("gH" . 'ivy-resume)
+        (", w" . 'evil-window-vsplit)
+        ("C-s" . 'save-buffer)
+        ("SPC" . 'evil-scroll-page-down)
+        ("S-SPC" . 'evil-scroll-page-up)
+        ("Y" . "y$")
+        ("Q" . 'fill-paragraph)
+        ("gq" . 'unfill-region)
+        ("M--" . 'comment-dwim)
+        ("gj" . 'todays-daypage)
+        ("M-#" . 'calc-dispatch)
+        ("gJ" . 'org-clock-jump-to-current-clock)
+        ("gf" . 'counsel-find-file)
+        ("gc" . 'counsel-switch-buffer)
+        ;;("gC" . 'projectile-switch-to-buffer)
+        ("gl" . 'org-store-link)
+        ("gr" . 'org-capture)
+        ;;("gm" . 'notmuch-or-check)
+        ;;("gn" . 'ein:notebooklist-open)
+        ;;("gN" . 'ein:connect-to-notebook)
+        ("gD" . 'dired-jump)
+        ("gM" . 'compose-mail)
+        ("ge" . 'eshell)
+        ("gG" . 'magit-status)
+        ("go" . 'helm-cmd-t)
+        ;;("gp" . 'tumblesocks-view-dashboard)
+        ("gp" . 'org-clock-in)
+        ("gP" . 'gcr-org-screenshot)
+        ("gs" . 'counsel-git-grep)
+        ("gS" . 'counsel-rg)
+        ;;("gw" . 'helm-wikipedia-suggest)
+        ("M-s" . 'swiper)
+        ("M-/" . 'swiper)
+        ("M-?" . 'swiper-all)
+
+        ("M-P" . 'evil-paste-pop)
+        ("M-p" . 'evil-paste-pop)
+
+        ("M-a" . 'counsel-M-x)
+        ("C-t" . 'evil-normal-state)
+        ;; A safety net. This is awful.
+        ("ZZ" . nil)
+        ("ZQ" . nil)
+        ("M-o" . 'evil-window-next)
+        ("M-O" . 'evil-window-prev)
+        ;;("M-s" . 'avy-goto-char-timer)
+        ;;("M-S" . 'ace-jump-word-mode)
+
+
+        :map evil-insert-state-map
+        ("C-s" . 'save-buffer)
+        ("M-a" . 'counsel-M-x)
+        ("C-t" . 'evil-normal-state)
+        ;;("M-s" . 'avy-goto-char-timer)
+        ;;("M-S" . 'ace-jump-word-mode)
+
+        :map evil-window-map
+        ("d" . 'evil-delete-buffer)     ;; C-w d
+        ("C-d" . 'evil-delete-buffer)   ;; C-w C-d
+
+        :map evil-motion-state-map
+        ("SPC" . 'evil-scroll-page-down)
+        ("S-SPC" . 'evil-scroll-page-up)
+
+        :map evil-emacs-state-map
+        ("M-a" . 'counsel-M-x)
+        ("C-t" . 'evil-normal-state)
+        ))
+
+(use-package evil-surround
+  :config
+  (global-evil-surround-mode 1))
+
+(progn "Ergoemacs keys"
+       ;; Can't believe this isn't defined yet. I have this nasty habit of
+       ;; doing M-d M-i to kill the line backward...
+       (defun backward-kill-line (arg)
+         "Kill ARG lines backward."
+         (interactive "p")
+         (kill-line (- 1 arg)))
+
+       ;; Ergo emacs keybindings. Gosh I love these. ;;;;;;;;;;;;;;;;;;;;;;;;
+       (define-key evil-normal-state-map (kbd "M-C") 'scroll-down-command)
+       (define-key evil-normal-state-map (kbd "M-T") 'scroll-up-command)
+       (dolist (map (list minibuffer-local-map
+                          evil-insert-state-map
+                          evil-emacs-state-map
+                          evil-normal-state-map
+                          ))
+         (define-key map (kbd "M-h") 'backward-char)
+         (define-key map (kbd "M-n") 'forward-char)
+         (define-key map (kbd "M-C") 'scroll-down-command)
+         (define-key map (kbd "M-T") 'scroll-up-command)
+         (define-key map (kbd "M-c") 'previous-line)
+         (define-key map (kbd "M-t") 'next-line)
+         (define-key map (kbd "M-g") 'backward-word)
+         (define-key map (kbd "M-r") 'forward-word)
+         (define-key map (kbd "M-G") 'backward-paragraph)
+         (define-key map (kbd "M-R") 'forward-paragraph)
+         (define-key map (kbd "M-d") 'beginning-of-line)
+         (define-key map (kbd "M-D") 'end-of-line)
+         (define-key map (kbd "M-C") 'scroll-down)
+         (define-key map (kbd "M-T") 'scroll-up)
+         (define-key map (kbd "M-H") 'beginning-of-buffer)
+         (define-key map (kbd "M-N") 'end-of-buffer)
+         (define-key map (kbd "M-l") 'recenter-top-bottom)
+         (define-key map (kbd "M-e") 'delete-backward-char)
+         (define-key map (kbd "M-u") 'delete-char)
+         (define-key map (kbd "M-.") 'backward-kill-word)
+         (define-key map (kbd "M-p") 'kill-word)
+         ;; ^^^ This is paste-pop so only do this in insert+emacs mode!
+         (define-key map (kbd "M-q") 'kill-region)
+         (define-key map (kbd "M-j") 'kill-ring-save)
+         (define-key map (kbd "M-k") 'yank)
+         (define-key map (kbd "M-K") 'yank-pop)
+         (define-key map (kbd "M-v") 'yank)
+         (define-key map (kbd "M-V") 'yank-pop)
+         ;; (define-key map (kbd "M-J") 'copy-all)
+         ;; (define-key map (kbd "M-Q") 'cut-all)
+         (define-key map (kbd "M-i") 'kill-line)
+         (define-key map (kbd "M-I") 'backward-kill-line)
+         (define-key map (kbd "M--") 'comment-dwim)
+         (define-key map (kbd "M-z") 'toggle-letter-case)
+         (define-key map (kbd "M-;") 'flyspell-auto-correct-previous-word)
+         (define-key map (kbd "M-o") 'evil-window-next)
+         (define-key map (kbd "M-O") 'evil-window-prev)
+         )
+
+       )
+
+(use-package ace-jump-mode :disabled
+  :config
+  (defadvice ace-jump-word-mode (after evil activate)
+    (recursive-edit))
+  (defadvice ace-jump-char-mode (after evil activate)
+    (recursive-edit))
+  (defadvice ace-jump-line-mode (after evil activate)
+    (recursive-edit))
+  (defadvice ace-jump-done (after evil activate)
+    (exit-recursive-edit)))
+
+(use-package evil-avy
+  :config
+  (evil-avy-mode 0)
+  (setq avy-keys '(?a ?o ?e ?u ?i ?d ?h ?t ?n ?s)
+        avy-background t)
+  )
+
+(use-package evil-snipe
+  :config
+  (evil-snipe-mode 1)
+  (evil-snipe-override-mode 1)
+  (setq evil-snipe-scope 'whole-buffer
+        evil-snipe-spillover-scope 'whole-buffer)
+  (add-hook 'magit-mode-hook 'turn-off-evil-snipe-override-mode)
+
+
+  )
+
+(use-package company
+  :bind (:map company-active-map
+              ("M-h" . 'company-select-previous)
+              ("M-n" . 'company-select-next)
+              ("M-c" . 'company-select-previous)
+              ("M-t" . 'company-select-next)))
+
+(use-package magit
+  :bind ("C-x g" . 'magit-status)
+  :init
+  ;; this is merely to remove the "Git:branchname" from the modeline
+  ;; takes up SO MUCH SPACE. ugh!
+  (setq vc-handled-backends (remove 'Git vc-handled-backends))
+  (setq vc-handled-backends (remove 'Hg vc-handled-backends))
+  (setq magit-last-seen-setup-instructions "1.4.0")
+
+  :config
+  (evil-add-hjkl-bindings magit-branch-manager-mode-map 'emacs
+    "K" 'magit-discard-item
+    "L" 'magit-log)
+  (evil-add-hjkl-bindings magit-status-mode-map 'emacs
+    "K" 'magit-discard-item
+    "l" 'magit-log
+    "h" 'magit-toggle-diff-refine-hunk)
+  (evil-set-initial-state 'magit-log-edit-mode 'insert)
+  )
+
+(use-package ido
+  :init
+  (setq ido-enable-flex-matching t) ;enable fuzzy matching
+  ;; Display ido results vertically, rather than horizontally
+  (setq ido-decorations
+        (quote ("\n-> "
+                ""
+                "\n   "
+                "\n   ..."
+                "[" "]"
+                " [No match]"
+                " [Matched]"
+                " [Not readable]"
+                " [Too big]"
+                " [Confirm]")))
+  ;; When I switch to buffer, always show it in this frame instead of
+  ;; switching to a different frame
+  (setq ido-default-buffer-method 'selected-window)
+
+  :config
+  (ido-mode t)
+  ;; Fix ido and friends. Sheesh :/
+  (define-key minibuffer-local-map (kbd "M-c") 'previous-history-element)
+  (define-key minibuffer-local-map (kbd "M-t") 'next-history-element)
+
+  (add-hook 'ido-setup-hook 'ido-my-keys)
+  (defun ido-my-keys ()
+    "Add my keybindings for ido."
+    (define-key ido-completion-map (kbd "M-h") 'ido-prev-match)
+    (define-key ido-completion-map (kbd "M-n") 'ido-next-match)
+    ;; (define-key ido-completion-map " " 'ido-next-match)
+    )
+  )
+
+(use-package desktop :disabled
+  :config
+  (desktop-save-mode t)
+  ;; save a bunch of variables to the desktop file
+  ;; for lists specify the len of the maximal saved data also
+  (setq desktop-globals-to-save
+        (append '((extended-command-history . 100)
+                  (file-name-history        . 100)
+                  (grep-history             . 100)
+                  (compile-history          . 100)
+                  (minibuffer-history       . 100)
+                  (query-replace-history    . 100)
+                  (read-expression-history  . 100)
+                  (regexp-history           . 100)
+                  (regexp-search-ring       . 100)
+                  (search-ring              . 100)
+                  (shell-command-history    . 100)
+                  tags-file-name
+                  register-alist)))
+
+  ;; Only restore 10 desktops on startup (the rest are recovered lazily.)
+  (setq desktop-restore-eager 10)
+
+  ;; Save the desktop every hour
+  (run-at-time 3600 3600 'desktop-save))
+
+(use-package desktop :disabled
+  :hook
+  (after-init . desktop-read)
+  (after-init . desktop-save-mode)
+  :custom
+  (desktop-base-file-name ".desktop")
+  (desktop-base-lock-name ".desktop.lock")
+  (desktop-restore-eager 8))
+
+(use-package js2-mode
+  :mode "\\.js$")
+
+(use-package livescript-mode
+  :mode "\\.ls"
+  :config
+  (setq coffee-tab-width 2)
+  (defun my-livescript-hook()
+    (setq tab-width 2)
+    (setq evil-shift-width 2))
+  (add-hook 'livescript-mode-hook 'my-livescript-hook)
+  )
+
+(use-package coffee-mode
+  :mode "\\.coffee"
+  :config
+  (setq coffee-tab-width 2)
+  (defun my-coffee-hook()
+    (setq tab-width 2)
+    (setq evil-shift-width 2))
+  (add-hook 'coffee-mode-hook 'my-coffee-hook)
+  (add-hook 'livescript-mode-hook 'my-coffee-hook)
+  )
+
+(use-package tex
+  :ensure auctex
+  :init
+  (defun gcr-latex-mode ()
+    (toggle-word-wrap 1)
+    (flyspell-mode t)
+    (auto-fill-mode 0)
+    (reftex-mode t)
+    (defface hi-todo '((t :foreground "black"
+                          :background "yellow"
+                          :box t
+                          ))
+      "TODO highlight")
+    (defun gcr-highlight-todo ()
+      (highlight-regexp "\\\\todo" 'hi-todo))
+    (gcr-highlight-todo))
+  (add-hook 'LaTeX-mode-hook 'gcr-latex-mode))
+
+(use-package evil-lion :disabled
+  :ensure t
+  :config
+  (evil-lion-mode 1))
+
+(use-package org
+  :demand t
+  :config
+  (add-hook 'org-mode-hook 'turn-on-flyspell 'append)
+  (add-hook 'org-mode-hook 'visual-line-mode 'append)
+  (add-hook 'org-mode-hook 'prettify-symbols-mode 'append)
+  (setq org-fontify-done-headline nil)
+  (require 'org-agenda)
+
+  (setq org-todo-keywords
+        '((sequence "TODO(t)" "|" "DONE(d)")
+          (sequence "PICKUP(p)" "|" "DONE")
+          (sequence "WAIT(w)" "|" "DONE")
+          (sequence "RUNNING(r)" "|" "DONE")
+          (sequence "HIGH(h)" "|" "DONE")
+          (sequence "READ(e)" "|" "DONE")
+          (sequence "CANCEL(c)" "|" "DONE")
+          (sequence "MEET(m)" "INVIT(i)" "SCHED(s)" "|" "DONE")))
+
+  (defun gcr/interpose (list element)
+    (if (cdr list)
+        (cons (car list)
+              (cons element (gcr/interpose (cdr list) element)))
+      list))
+  (defun gcr/compose (str)
+    (gcr/interpose (string-to-list str)
+                   '(Br . Bl)))
+
+  (setq-default prettify-symbols-alist `(("[ ]" . ,(gcr/compose
+                                                    "  "))
+                                         ("[-]" . ,(gcr/compose
+                                                    "  "))
+                                         ("[X]" . ,(gcr/compose
+                                                    "  "))
+                                         ;;("TODO" . "	")
+                                         ("TODO" . ,(gcr/compose
+                                                     "   "))
+                                         ("RUNNING" . ,(gcr/compose
+                                                        "   "))
+                                         ("CANCEL" . ,(gcr/compose "⃠ "))
+                                         ("WAIT" . ,(gcr/compose "   "))
+                                         ("DONE" . ,(gcr/compose "   "))
+                                         ("HIGH" . ,(gcr/compose " 𥉉  "))
+                                         ("PICKUP" . ,(gcr/compose "   "))
+                                         ("READ" . ,(gcr/compose "   "))
+                                         ;;("MEET" . "	")
+                                         ;;("SCHED" . "	")
+                                         ;;("MEET" . "	")
+                                         ;;("INVIT" . "	")
+                                         ;;("INVIT" . "	")
+                                         ;;("SCHED" . " 	")
+                                         ("MEET" . ,(gcr/compose "  "))
+                                         ("INVIT" . ,(gcr/compose
+                                                      "  ?"))
+                                         ;;("INVIT" . "	")
+                                         ;;("SCHED" . "	")
+                                         ("SCHED" . ,(gcr/compose
+                                                      "   "))
+                                         ))
+
+
+  (setq org-use-fast-todo-selection t)
+  (setq org-hide-emphasis-markers t)
+  (setq org-clock-persist t)
+  (org-clock-persistence-insinuate)
+  (setq org-clock-idle-time 5)
+  (setq org-clock-out-remove-zero-time-clocks t)
+  (setq org-agenda-skip-scheduled-if-done t)
+  (setq org-startup-folded 'content)
+  (setq org-cycle-separator-lines 3)
+  (setq org-ellipsis 'org-ellipsis)
+
+  (setq org-refile-use-outline-path t)
+  (setq org-outline-path-complete-in-steps nil)
+  (setq org-refile-targets '((org-agenda-files :maxlevel . 3)))
+  (setq org-return-follows-link t)
+
+  (load-file "~/.emacs.d/org-daypage.el")
+
+  (setq org-default-notes-file "~/notes/index.org")
+  (setq org-directory "~/notes/")
+  (setq daypage-path "~/notes/days/")
+
+  (defun jump-to-daypage-end ()
+    ;; (set-buffer (org-capture-target-buffer (nth 1 target)))
+    (let ((daypage-file-name
+           (expand-file-name (concat daypage-path (format-time-string "%Y-%m-%d %a" (current-time)) ".org"))))
+      (if (file-exists-p daypage-file-name)
+          (set-buffer (org-capture-target-buffer daypage-file-name))
+        (progn
+          (set-buffer (org-capture-target-buffer daypage-file-name))
+          (insert "#+CATEGORY: day\n"))))
+    (org-capture-put-target-region-and-position)
+    (widen)
+    (end-of-buffer))
+
+  (setq org-capture-templates
+        `(
+
+          ("t" "Task" entry
+           (file "~/notes/tasks.org")
+           "* TODO %?\nSCHEDULED: %t\n%i")
+          ("T" "Task with clipboard" entry
+           (file "~/notes/tasks.org")
+           "* TODO %?\nSCHEDULED: %t\n%c")
+          ("l" "Task with link" entry
+           (file "~/notes/tasks.org")
+           "* TODO %?\nSCHEDULED: %t\n%a")
+
+          ("r" "Reading list entry" entry
+           (file "~/notes/reading-list.org")
+           "* READ %?\n%x")
+
+          ("c" "Clock item" entry
+           (file "~/notes/tasks.org")
+           "* %?"
+           :clock-in t
+           :clock-keep t)
+          ;; ("t" "Daypage entry" entry
+          ;;  (function jump-to-daypage-end)
+          ;;  "* %?\n%i" :empty-lines 1)
+          ;; ("T" "Daypage entry, with context" entry
+          ;;  (function jump-to-daypage-end)
+          ;;  "* TODO %?\n%a" :empty-lines 1)
+          ;; ("t" "Todo")
+          ;; ("tt" "Vast TODO" entry
+          ;;  (file+headline "~/notes/index" "Misc")
+          ;;  "* TODO %?\nSCHEDULED: %t\n%i" :prepend t)
+          ;; ("tu" "UCSD TODO" entry
+          ;;  (file+headline "~/notes/ucsd.org" "Tasks")
+          ;;  "* TODO %?\nSCHEDULED: %t\n%i" :prepend t)
+          ;; ("ta" "Task for tonight" item
+          ;;  (file+headline "~/notes/taskstab.org" "Captured")
+          ;;  "%?%x" :prepend t)
+          ;; ("e" "Elatab" plain
+          ;;  (file "~/notes/elatab")
+          ;;  "%?%x" :prepend t)
+          ;; ("c" "Clock task")
+          ;; ("cv" "VAST" entry
+          ;;  (file+headline "~/notes/index" "Misc")
+          ;;  "* %?" :prepend t :clock-in t :clock-keep t)
+          ;; ("cs" "Securics" entry
+          ;;  (file+headline "~/notes/securics.org" "Log")
+          ;;  "* %?" :prepend t :clock-in t :clock-keep t)
+          ;; ("l" "Thing I want to learn" checkitem
+          ;;  (file+headline "~/notes/index" "Things I wish I could learn")
+          ;;  "- [ ] %?" :prepend t)
+          ;; ("h" "Homework")
+          ;; ("ha" "Algorithms" entry
+          ;;  (file+headline "~/notes/algorithms/algorithms.org" "Homework")
+          ;;  "* HW %?\nSCHEDULED: %t" :prepend t)
+          ;; ("hm" "Modern Analytics" entry
+          ;;  (file+headline "~/notes/cs5785-TA/cs5785-ta.org" "Homework")
+          ;;  "* HW %?\nSCHEDULED: %t" :prepend t)
+          ;; ("hp" "Programming languages" entry
+          ;;  (file+headline "~/notes/programming-languages/programming-languages.org" "Homework")
+          ;;  "* HW %?\nSCHEDULED: %t" :prepend t)
+          ))
+
+  ;; Adjust agenda sorting to move habits to the top of list.
+  (setq org-agenda-sorting-strategy
+        '((agenda habit-up time-up priority-down category-keep)
+          (todo priority-down category-keep)
+          (tags priority-down category-keep)
+          (search category-keep)))
+  ;; Shorten the text
+  (setq org-agenda-scheduled-leaders '("" "Sched.%2dx: "))
+  ;; Pretty colors
+  ;; (setq org-todo-keyword-faces
+  ;;       '(("TODO" :foreground "#FFaEa4" :bold t)
+  ;;         ("DONE" :foreground "#B4C342" :bold t)
+  ;;         ("READ" :foreground "#9EA0E5" :bold t)))
+
+
+  ;; Exclude DONE state tasks from refile targets
+  (defun bh/verify-refile-target ()
+    "Exclude todo keywords with a done state from refile targets"
+    (not (member (nth 2 (org-heading-components)) org-done-keywords)))
+  (setq org-refile-target-verify-function 'bh/verify-refile-target)
+
+  (defun gcr-org-screenshot ()
+    "Take a screenshot into a time stamped unique-named file in the
+same directory as the org-buffer and insert a link to this file."
+    ;; Thanks, http://stackoverflow.com/questions/17435995/paste-an-image-on-clipboard-to-emacs-org-mode-file-without-saving-it
+    (interactive)
+    (setq filename
+          (concat
+           (make-temp-name
+            (concat (buffer-file-name)
+                    "_"
+                    (format-time-string "%Y%m%d_%H%M%S_")) ) ".png"))
+                                        ;(copy-file "/tmp/sshot.png" filename)
+    (call-process "pngpaste" nil nil nil filename)
+    (insert (concat "[[" filename "]]"))
+    (org-display-inline-images))
+
+  (defun show-all-and-hide-drawers ()
+    (interactive)
+    (show-all)
+    (org-cycle-hide-drawers 'all))
+  (evil-define-key 'normal org-mode-map
+    (kbd "RET") 'org-open-at-point
+    "za"        'org-cycle
+    "zA"        'org-shifttab
+    "zm"        'hide-body
+    "zr"        'show-all-and-hide-drawers
+    "zo"        'show-subtree
+    "zO"        'show-all
+    "zc"        'hide-subtree
+    "zC"        'hide-all
+    "zk"        'outline-previous-visible-heading
+    "zj"        'outline-next-visible-heading
+    "zu"        'outline-up-heading
+    ;; ;; scroll through time~~!!
+    ;; (kbd "<wheel-left>") 'daypage-prev
+    ;; (kbd "<wheel-right>") 'daypage-next
+    (kbd "M-j") 'org-shiftleft
+    (kbd "M-k") 'org-shiftright ;; this is yank though, -- bad!
+    (kbd "M-H") 'org-metaleft
+    (kbd "M-J") 'org-metadown
+    (kbd "M-K") 'org-metaup
+    (kbd "M-L") 'org-metaright
+    (kbd "M-h") 'daypage-prev
+    (kbd "M-n") 'daypage-next
+    )
+
+  ;; Undo archive
+  (define-key org-agenda-mode-map "$" nil)
+
+  (evil-define-key 'normal orgstruct-mode-map
+    (kbd "RET") 'org-open-at-point
+    "za"        'org-cycle
+    "zA"        'org-shifttab
+    "zm"        'hide-body
+    "zr"        'show-all
+    "zo"        'show-subtree
+    "zO"        'show-all
+    "zc"        'hide-subtree
+    "zk"        'org-previous-visible-heading
+    "zj"        'org-next-visible-heading
+    "zC"        'hide-all
+    (kbd "TAB") 'org-cycle
+    (kbd "M-j") 'org-shiftleft
+    (kbd "M-k") 'org-shiftright
+    (kbd "M-H") 'org-metaleft
+    (kbd "M-J") 'org-metadown
+    (kbd "M-K") 'org-metaup
+    (kbd "M-L") 'org-metaright)
+
+  (define-key daypage-mode-map (kbd "<C-M-left>") 'daypage-prev)
+  (define-key daypage-mode-map (kbd "<C-M-right>") 'daypage-next)
+  (define-key daypage-mode-map (kbd "C-c l") 'gcr-daypage-store-link)
+
+  (define-key global-map (kbd "M-#") 'calc-dispatch)
+
+  ;; (setq org-ditaa-jar-path "/usr/share/java/ditaa/ditaa-0_9.jar")
+  ;;(setq org-plantuml-jar-path "~/java/plantuml.jar")
+  ;;(add-hook 'org-babel-after-execute-hook 'org-display-inline-images 'append)
+  ;;(add-to-list 'org-src-lang-modes '("scheme" . scheme))
+
+  ;;(require 'org-latex)
+  ;;(add-to-list 'org-export-latex-packages-alist '("" "tikz" t))
+  ;;(setq org-latex-create-formula-image-program 'imagemagick)
+  ;; Say  C-c C-x C-l  to use this
+
+  ;; (org-babel-do-load-languages
+  ;;  (quote org-babel-load-languages)
+  ;;  (quote ((emacs-lisp . t)
+  ;;          (dot . t)
+  ;;          (ditaa . t)
+  ;;          (R . t)
+  ;;          (python . t)
+  ;;          (ipython . t)
+  ;;          (ruby . t)
+  ;;          (gnuplot . t)
+  ;;          (clojure . t)
+  ;;          ;(sh . t)
+  ;;          (scheme . t)
+  ;;          (ledger . t)
+  ;;          (org . t)
+  ;;          (plantuml . t)
+  ;;          (latex . t))))
+  ;; HTML
+  ;; (setq org-export-htmlize-output-type 'css)
+
+  ;;(require 'org-publish)
+  ;; (setq org-publish-project-alist
+  ;;       '(
+
+  ;; ("sneakygcr-notes"
+  ;;  :base-directory "~/Projects/hpage/org/"
+  ;;  :publishing-directory "~/Projects/hpage/baked/"
+  ;;  :base-extension "org"
+  ;;  :recursive t
+  ;;  :publishing-function org-publish-org-to-html
+  ;;  :headline-levels 4             ; Just the default for this project.
+  ;;  :html-preamble "<h1><a href=\"http://sneakygcr.net/\">_gcr</a></h1>"
+  ;;  :html-postamble "<p class=\"date\">Last updated on %d</p>"
+  ;;  )
+
+  ;; ("sneakygcr-static"
+  ;;  :base-directory "~/Projects/hpage/org/"
+  ;;  :publishing-directory "~/Projects/hpage/baked/"
+  ;;  :base-extension "css\\|js\\|png\\|jpg\\|txt\\|gif\\|pdf\\|mp3\\|ogg\\|swf"
+  ;;  :recursive t
+  ;;  :publishing-function org-publish-attachment
+  ;;  )
+
+  ;; ("blog-sneakygcr" :components ("sneakygcr-static" "sneakygcr-notes"))
+
+  ;;       ))
+
+  ;; (setq org-modules (cons 'org-habit org-modules)
+  ;;       org-habit-following-days 3
+  ;;       org-habit-graph-column 50
+  ;;       org-habit-show-done-always-green t
+  ;;       )
+
+
+
+  ;; (defun gcr-jump-to-daypage (filename)
+  ;;   (interactive)
+  ;;   (message "OK, JUMPING TO:")
+  ;;   (message filename)
+  ;;   (when (string-match "^\\([0-9]\\{4\\}\\)-\\([0-9]\\{2\\}\\)-\\([0-9]\\{2\\}\\)$" filename)
+  ;;     (cl-flet ((d (i) (string-to-number (match-string i filename))))
+  ;;       (let ((date (org-time-string-to-time (format "%04d-%02d-%02d"
+  ;;                                                    (d 1) (d 2) (d 3)))))
+  ;;         (find-file (concat daypage-path (format-time-string "%Y-%m-%d %a" date) ".org")))))
+  ;;   nil)
+
+  ;; (defun gcr-daypage-store-link ()
+  ;;   (interactive)
+  ;;   (let ((timestring (format-time-string "%Y-%m-%d" (daypage-date))))
+  ;;     (kill-new (format "[Daypage for %s](org-protocol://daypage://%s)"
+  ;;                       timestring
+  ;;                       timestring
+  ;;                       )))
+  ;;   (message "Markdown link stored.")
+  ;;   )
+
+  ;; (setq org-protocol-protocol-alist '())
+
+
+  ;; (add-to-list 'org-protocol-protocol-alist
+  ;;              '("daypage"
+  ;;                :protocol "daypage"
+  ;;                :function gcr-jump-to-daypage))
+
+
+  )
+
+(use-package org-superstar :disabled
+  :hook org-mode
+  :config
+  ;; Hide markup like "~" or "_" or "*"
+  (setq org-hide-emphasis-markers t)
+
+  ;; Don't align tags
+  (setq org-tags-column 0)
+
+  ;; Increase indenation in org-indent
+  ;;(setq org-indent-indentation-per-level 6)
+  ;;(setq org-indent-boundary-char ?　)
+
+  ;; Remove TODO keywrods from org-mode (it will still work in agenda)
+  ;;(set-ligatures! 'org-mode
+  ;;                :alist '(("TODO " . "")
+  ;;                         ("NEXT " . "")
+  ;;                         ("PROG " . "")
+  ;;                         ("WAIT " . "")
+  ;;                         ("DONE " . "")
+  ;;                         ("FAIL " . "")))
+
+  ;; Ellipsis configuration
+  (setq org-ellipsis " ")
+
+  ;; Every non-TODO headline now have no bullet
+  (setq org-superstar-headline-bullets-list '("　"))
+  (setq org-superstar-leading-bullet " .")
+  ;; Enable custom bullets for TODO items
+  (setq org-superstar-special-todo-items t)
+  (setq org-superstar-todo-bullet-alist
+        ;; :config
+        ;;   " " " " " " " " " "
+        '(("TODO" " ")
+          ("RUNNING" " ")
+          ("WAIT" " ")
+          ("DONE" " ")))
+  (org-superstar-restart))
+
+(use-package web-mode
+  :mode "\\.html?$")
+
+(use-package rainbow-mode
+  :hook (web-mode css-mode))
+
+(use-package emmet-mode
+  :hook web-mode)
+
+(use-package markdown-mode
+  :mode "\\.md"
+  :config
+  (add-hook 'markdown-mode-hook '(lambda ()
+                                   (auto-fill-mode)
+                                   (flyspell-mode))))
+
+(use-package cc-mode
+  :ensure nil
+  :config
+  (add-hook 'c-mode-hook
+            (lambda ()
+              (setq comment-start "//"
+                    comment-end   ""
+                    )))
+  (setq c-basic-offset 4
+        c-default-style (quote ((c-mode . "linux") (java-mode . "java") (awk-mode . "awk") (c++-mode . "k&r") (other . "gnu")))
+        c-electric-pound-behavior (quote (alignleft)))
+  ;; Cc-mode
+  (add-hook 'c-mode-common-hook
+            '(lambda ()
+               ;; SLOW (setq ac-sources (append '(ac-source-semantic-raw) ac-sources))
+               (setq ac-sources (remove 'ac-source-dictionary ac-sources))
+               ;;(setq ac-sources (remove 'ac-source-words-in-same-mode-buffers ac-sources))
+               ;; TODO: semantic-idle-summary-mode, let it expand to get all of the documentation.
+               ;;(local-set-key (kbd "RET") 'newline-and-indent)
+               (local-set-key (kbd "M-/") 'ac-complete-semantic-raw)
+                                        ;(linum-mode t)
+               )))
+
+(use-package lua-mode :mode "\\.lua")
+
+(use-package helm
+  :config
+  (require 'helm-config)
+
+  ;; The default "C-x c" is quite close to "C-x C-c", which quits Emacs.
+  ;; Changed to "C-c h". Note: We must set "C-c h" globally, because we
+  ;; cannot change `helm-command-prefix-key' once `helm-config' is loaded.
+  (global-set-key (kbd "C-c h") 'helm-command-prefix)
+  (global-unset-key (kbd "C-x c"))
+
+  (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) ; rebind tab to run persistent action
+  (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action) ; make TAB works in terminal
+  (define-key helm-map (kbd "C-z")  'helm-select-action) ; list actions using C-z
+
+  (define-key helm-map (kbd "M-h")  'helm-previous-line) ; list actions using C-z
+  (define-key helm-map (kbd "M-n")  'helm-next-line) ; list actions using C-z
+  (define-key helm-map (kbd "M-.")  'backward-kill-word) ; list actions using C-z
+
+  (when (executable-find "curl")
+    (setq helm-google-suggest-use-curl-p t))
+
+  (setq helm-split-window-in-side-p           nil
+        ;; helm-move-to-line-cycle-in-source     nil ; move to end or beginning of source when reaching top or bottom of source.
+        helm-ff-search-library-in-sexp        t ; search for library in `require' and `declare-function' sexp.
+        helm-scroll-amount                    8 ; scroll 8 lines other window using M-<next>/M-<prior>
+        helm-ff-file-name-history-use-recentf t
+        helm-buffers-fuzzy-matching t
+        helm-M-x-fuzzy-matching t
+        helm-locate-fuzzy-match t
+
+        helm-ff-skip-boring-files t
+        )
+
+  (helm-mode 1)
+  ;; Supposed to provide better fuzzy matching search results.
+  ;; See http://melpa.org/#/helm-fuzzier for details?
+  )
+(use-package helm-fuzzier
+  :config
+  (helm-fuzzier-mode 1))
+(use-package helm-cmd-t)
+(use-package helm-rg)
+(use-package helm-ls-git)
+
+(progn "Display tweaks"
+       (setq mouse-wheel-progressive-speed nil) ;; Don't accelerate scrolling with mouse wheel.
+       (setq mouse-wheel-scroll-amount '(1 ((shift) . 1) ((control) . nil)))
+       (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+       (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+       (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
+       (setq tooltip-use-echo-area t)
+       ;; Better clipboard integration.
+       (setq save-interprogram-paste-before-kill t ;; Don't forget the primary selection when I kill something else.
+             x-select-enable-clipboard t
+             x-select-enable-primary t ;; Yank and paste from the clipboard first, and primary second.
+             )
+
+       (set-fontset-font "fontset-default"
+                         'japanese-jisx0208
+                         '("Hiragino Kaku Gothic Pro" . "iso10646-1"))
+
+       (defun --set-emoji-font (frame)
+         "Adjust the font settings of FRAME so Emacs can display emoji properly."
+         (if (eq system-type 'darwin)
+             ;; For NS/Cocoa
+             (set-fontset-font t 'symbol (font-spec :family "Apple Color Emoji") frame 'prepend)
+           ;; For Linux
+           (set-fontset-font t 'symbol (font-spec :family "Symbola") frame 'prepend)))
+
+       ;; For when Emacs is started in GUI mode:
+       (--set-emoji-font nil)
+       ;; Hook for when a frame is created with emacsclient
+       ;; see https://www.gnu.org/software/emacs/manual/html_node/elisp/Creating-Frames.html
+       (add-hook 'after-make-frame-functions '--set-emoji-font)
+
+       )
+
+(when (equal system-type 'darwin) ; Mac OS-X-specific keys.
+  ;; Set Command to really be Meta
+  (setq mac-command-modifier 'meta)
+
+  ;; Play nice with homebrew
+  (add-to-list 'exec-path "/usr/local/bin")
+  (setenv "PATH" (concat
+                  "/usr/local/bin:"
+                  "/usr/texbin:"
+                  "/Library/TeX/texbin:"
+                  "/Users/kimmy/.local/bin:"
+                  "/usr/local/opt/llvm/bin:"
+                  (getenv "PATH")))
+
+  (setq-default lsp-clients-clangd-executable "/usr/local/opt/llvm/bin/clangd")
+
+  ;; thanks, http://stackoverflow.com/questions/25415070/hunspell-emacs-on-os-x-10-9
+  ;;(add-hook 'ispell-initialize-spellchecker-hook
+  ;;          (lambda ()
+  ;;            (setq ispell-base-dicts-override-alist
+  ;;                  '((default ; default
+  ;;                     "[A-Za-z]" "[^A-Za-z]" "[']" t
+  ;;                     ("-d" "en_US" "-i" "utf-8") nil utf-8)
+  ;;                    ("american" ; Yankee English
+  ;;                     "[A-Za-z]" "[^A-Za-z]" "[']" t
+  ;;                     ("-d" "en_US" "-i" "utf-8") nil utf-8)
+  ;;                    ("british" ; British English
+  ;;                     "[A-Za-z]" "[^A-Za-z]" "[']" t
+  ;;                     ("-d" "en_GB" "-i" "utf-8") nil utf-8)))))
+  (setq browse-url-generic-program "open")
+  )
+
+(unless window-system
+  ;; ITERM2 MOUSE SUPPORT
+  (require 'mouse)
+  (xterm-mouse-mode t)
+  (defun track-mouse (e))
+  (setq mouse-sel-mode t)
+
+  ;; Cursor shape
+  (add-hook 'evil-insert-state-entry-hook
+            (lambda () (send-string-to-terminal "\033[5 q")))
+  (add-hook 'evil-normal-state-entry-hook
+            (lambda () (send-string-to-terminal "\033[0 q")))
+
+  )
+
+;;(use-package powerline
+;;  :config
+;;
+;;  (powerline-center-evil-theme)
+;;  )
+
+(use-package moe-theme :disabled
+  :config
+  (moe-theme-apply-color 'magenta)
+
+  (setq moe-theme-resize-org-title '(1.6 1.4 1.3 1.2 1.2 1.0 1.0 1.0 1.0))
+
+  (moe-light)
+
+  )
+
+(use-package ewal-spacemacs-themes
+  :config
+  (load-theme 'spacemacs-light t)
+
+  ;; (let* ((variable-tuple
+  ;;       (cond ((x-list-fonts "ETBembo")         '(:font "ETBembo"))
+  ;;             ((x-list-fonts "Source Sans Pro") '(:font "Source Sans Pro"))
+  ;;             ((x-list-fonts "Lucida Grande")   '(:font "Lucida Grande"))
+  ;;             ((x-list-fonts "Verdana")         '(:font "Verdana"))
+  ;;             ((x-family-fonts "Sans Serif")    '(:family "Sans Serif"))
+  ;;             (nil (warn "Cannot find a Sans Serif Font.  Install Source Sans Pro."))))
+  ;;      ;;(base-font-color     (face-foreground 'default nil 'default))
+  ;;      ;;(headline           `(:inherit default :weight bold :foreground ,base-font-color)))
+  ;;      (headline           `(:inherit default :weight bold)))
+  ;; (custom-theme-set-faces
+  ;;  'user
+  ;;  `(org-hide ((t (:foreground "#fbf8ef"))))
+  ;;  `(org-level-8 ((t (,@headline ,@variable-tuple))))
+  ;;  `(org-level-7 ((t (,@headline ,@variable-tuple))))
+  ;;  `(org-level-6 ((t (,@headline ,@variable-tuple))))
+  ;;  `(org-level-5 ((t (,@headline ,@variable-tuple))))
+  ;;  `(org-level-4 ((t (,@headline ,@variable-tuple :height 1.1))))
+  ;;  `(org-level-3 ((t (,@headline ,@variable-tuple :height 1.25))))
+  ;;  `(org-level-2 ((t (,@headline ,@variable-tuple :height 1.5))))
+  ;;  `(org-level-1 ((t (,@headline ,@variable-tuple :height 1.75))))
+  ;;  `(org-document-title ((t (,@headline ,@variable-tuple :height 2.0 :underline nil))))
+  ;;  `(variable-pitch ((t (,@variable-tuple :weight thin))))
+  ;;  '(fixed-pitch ((t (:family "PragmataPro Nerd Font"))))))
+
+  )
+
+(use-package dumb-jump
+  :config
+    (add-hook 'xref-backend-functions #'dumb-jump-xref-activate)
+  )
+
+
+;;(use-package solarized-theme
+;;  :config
+;;  (load-theme 'solarized-light t))
+
+(progn "Misc tweaks"
+
+       (server-start)
+
+       (save-place-mode 1)
+
+       (setq confirm-kill-emacs
+             (lambda (e)
+               (y-or-n-p-with-timeout
+                "Really exit Emacs (automatically exits in 5 secs)? " 5 t)))
+
+       (add-hook 'emacs-lisp-mode-hook 'turn-on-eldoc-mode)
+
+       ;; Delete trailing whitespace when we save
+       (add-hook 'before-save-hook 'delete-trailing-whitespace)
+       (define-key global-map (kbd "RET") 'newline-and-indent)
+       (define-key global-map (kbd "C-x \\") 'align-regexp)
+
+       (define-key global-map (kbd "C-M-<backspace>") 'backward-kill-sexp)
+
+       ;; OMG TRAMP
+       (require 'dired-x) ; Lets you see the buffer in the filesystem with C-x C-j
+
+                                        ; colors in shell
+       (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
+
+       (setq tab-width 4)
+       (setq-default tab-width 4)
+       (setq-default indent-tabs-mode nil)
+
+       ;; create the autosave dir if necessary, since emacs won't.
+       (require 'tramp)
+       (make-directory "~/.emacs-temp/" t)
+       (setq tramp-auto-save-directory "~/.emacs-temp/")
+
+       (setq sentence-end-double-space nil)  ; SERIOUSLY. Why is this NOT the default?!
+
+       (defalias 'yes-or-no-p 'y-or-n-p)     ; y/n instead of yes/no
+
+       (add-hook 'doc-view-mode-hook 'auto-revert-mode)
+       (add-hook 'doc-view-mode-hook 'buffer-disable-undo) ; prevent warning message. :(
+       (put 'set-goal-column 'disabled nil)
+
+       (defun search-all-buffers (regexp)
+         (interactive "sSearch all buffers for regexp: ")
+         (multi-occur (buffer-list) regexp))
+       (global-set-key (kbd "C-x M-s") 'search-all-buffers)
+
+       (setq compilation-ask-about-save nil)
+       (global-set-key (kbd "C-M-<return>") 'compile)
+
+       (setq browse-url-generic-program "open")
+
+       (when (executable-find "hunspell")
+         (setq-default ispell-program-name "hunspell")
+         (setq ispell-really-hunspell t))
+
+       ;; Show-paren mode
+       (show-paren-mode 1)
+
+
+       ;; (defun toggle-selective-display (column)
+       ;;   (interactive "P")
+       ;;   (set-selective-display
+       ;;    (or column
+       ;;        (unless selective-display
+       ;;          (1+ (current-column))))))
+
+       ;; (defun evil-close-folds (column)
+       ;;   (interactive "P")
+       ;;   (toggle-selective-display column))
+
+
+
+       (require 'undo-tree)
+       (setq undo-tree-mode-lighter 'nil)
+
+       (require 'uniquify) ; Better buffer names
+       )
+
+(use-package delight
+  ;; Hide things from the modeline
+  :config
+  (delight '((auto-fill-mode)
+             (magit-auto-revert-mode "" magit)
+             (helm-mode)
+             (auto-complete-mode)
+             (org-indent-mode "" org-mode)
+             )))
+
+(use-package eshell
+  :ensure nil
+
+  :init
+  (require 'em-smart)
+  (setq eshell-where-to-jump 'begin)
+  (setq eshell-review-quick-commands nil)
+  (setq eshell-smart-space-goes-to-end t)
+  (global-set-key (kbd "C-x E") 'eshell)
+
+  :config
+  (defun eshell-evil-hook ()
+    (evil-define-key 'normal eshell-mode-map
+      "0" 'eshell-bol)
+    (evil-define-key 'insert eshell-mode-map
+      (kbd "M-d") 'eshell-bol
+      (kbd "M-c") 'eshell-previous-matching-input-from-input
+      (kbd "M-t") 'eshell-next-matching-input-from-input)
+    (evil-insert-state))
+  (add-hook 'eshell-mode-hook 'eshell-evil-hook)
+
+  (evil-set-initial-state 'eshell-mode 'insert)
+
+  )
+
+(use-package evil-indent-plus
+;;;;;;;;;;;;;; Evil-indent-plus keys ;;;;;;;;;;;;;;;
+  ;; Adds new text objects:
+  ;;
+  ;; ii, ai: Block of text with same or higher indentation
+  ;; iI, aI: Block of text with same or higher indentation, including the first line
+  ;;         above with smaller indentation
+  ;; iJ, aJ: Block of text with same or higher indentation, including the first lines
+  ;;         above and below with smaller indentation
+  :config
+  (evil-indent-plus-default-bindings))
+
+(use-package org-roam
+      :ensure t
+      :hook
+      (after-init . org-roam-mode)
+      :custom
+      (org-roam-directory "/Users/kimmy/notes/days/")
+      :bind (:map org-roam-mode-map
+              (("C-c n l" . org-roam)
+               ("C-c n f" . org-roam-find-file)
+               ("C-c n g" . org-roam-graph))
+              :map org-mode-map
+              (("C-c n i" . org-roam-insert))
+              (("C-c i" . org-roam-insert))
+              (("C-c n u" . org-roam-unlinked-references))
+              (("C-c n I" . org-roam-insert-immediate)))
+      :config
+      (setq org-roam-title-sources '((title) alias))
+
+      ;; org mode: open link in same window
+      (add-to-list 'org-link-frame-setup '(file . find-file))
+
+      ;; override keys
+      (evil-define-key 'normal org-mode-map
+        "gt" 'org-roam-find-file
+        "gr" 'org-roam-capture)
+
+      ;; Use org-id for links
+      (setq org-id-link-to-org-use-id t)
+
+      ;; adjust buffer titles
+      (defun org+-buffer-name-to-title ()
+        "Rename buffer to value of #+TITLE:."
+        (interactive)
+        (save-excursion
+          (goto-char (point-min))
+          (when (re-search-forward "^[[:space:]]*#\\+TITLE:[[:space:]]*\\(.*?\\)[[:space:]]*$" nil t)
+            (rename-buffer (match-string 1)))))
+
+      (add-hook 'org-mode-hook #'org+-buffer-name-to-title)
+
+
+      (defun org-roam-create-note-from-headline ()
+        "Create an Org-roam note from the current headline and jump to it.
+
+Normally, insert the headline’s title using the ’#title:’ file-level property
+and delete the Org-mode headline. However, if the current headline has a
+Org-mode properties drawer already, keep the headline and don’t insert
+‘#+title:'. Org-roam can extract the title from both kinds of notes, but using
+‘#+title:’ is a bit cleaner for a short note, which Org-roam encourages."
+        (interactive)
+        (let ((title (nth 4 (org-heading-components)))
+              (has-properties (org-get-property-block)))
+          (org-cut-subtree)
+          (org-roam-find-file title nil nil 'no-confirm)
+          (org-paste-subtree)
+          (unless has-properties
+            (kill-line)
+            (while (outline-next-heading)
+              (org-promote)))
+          (goto-char (point-min))
+          (when has-properties
+            (kill-line)
+            (kill-line))))
+
+      ;; Completion-at-point
+
+      (global-company-mode)
+      (setq company-minimum-prefix-length 2)
+      (setq company-idle-delay 0.25)
+      (add-to-list 'company-backends 'company-capf)
+
+      ;; This enables candidates matching to be case-insensitive
+      (setq completion-ignore-case t)
+
+      ;; You need this for your org-roam part of configuration
+      ;; This prevents it from automatically replacing [[Title of a note]]
+      ;; into [[file:path/to/note][Title of a note]].
+      ;;(setq org-roam-auto-replace-fuzzy-links nil)
+
+      (setq org-roam-completion-everywhere t)
+
+      (setq org-roam-completion-system 'ivy)
+
+      )
+
+;(use-package consult-ripgrep
+;  :config
+;  (defun bms/org-roam-rg-search ()
+;    "Search org-roam directory using consult-ripgrep. With live-preview."
+;    (interactive)
+;    (let ((consult-ripgrep-command "rg --null --ignore-case --type org --line-buffered --color=always --max-columns=500 --no-heading --line-number . -e ARG OPTS"))
+;      (consult-ripgrep org-roam-directory)))
+;;(global-set-key (kbd "C-c rr") 'bms/org-roam-rg-search)
+;  )
+
+(use-package ivy
+  :diminish (ivy-mode . "")
+  :bind
+  (:map ivy-mode-map
+        ("C-'" . ivy-avy)
+        ("M-h" . ivy-previous-line)
+        ("M-n" . ivy-next-line)
+        ;("M-t" . ivy-next-line)
+        ("C-M-h" . ivy-previous-line-and-call)
+        ("C-M-n" . ivy-next-line-and-call)
+        ("M-H" . ivy-previous-line-and-call)
+        ("M-N" . ivy-next-line-and-call)
+        ;("M-t" . ivy-call)
+        )
+  :config
+  (ivy-mode 1)
+  ;; add ‘recentf-mode’ and bookmarks to ‘ivy-switch-buffer’.
+  (setq ivy-use-virtual-buffers t)
+  ;; number of result lines to display
+  (setq ivy-height 10)
+  ;; does not count candidates
+  (setq ivy-count-format "")
+  ;; no regexp by default
+  (setq ivy-initial-inputs-alist nil)
+  ;; configure regexp engine.
+  (setq ivy-re-builders-alist
+	;; allow input not in order
+        '((t   . ivy--regex-ignore-order)))
+  (setq ivy-wrap t)
+  )
+(use-package counsel)
+(use-package company-statistics
+  :config
+  (company-statistics-mode))
+
+(use-package direnv
+ :config
+ (direnv-mode))
+
+(use-package olivetti-mode
+  :config
+  (setq olivetti-body-width 40))
+
+;; (use-package quelpa)
+;; (quelpa
+;;  '(quelpa-use-package
+;;    :fetcher git
+;;    :url "https://github.com/quelpa/quelpa-use-package.git"))
+;; (require 'quelpa-use-package)
+;; (use-package lister
+;;   :quelpa (lister :fetcher git
+;;   		  :url "https://github.com/publicimageltd/lister"))
+;; (use-package delve
+;;   :quelpa (delve :fetcher git
+;; 		 :url "https://github.com/publicimageltd/delve")
+;;   :config
+;;   (use-package delve-minor-mode
+;;     :config
+;;     (add-hook 'org-mode-hook #'delve-minor-mode-maybe-activate))
+;;   :bind
+;;   (("<f12>" . delve-open-or-select)))
+#+END_SRC

@@ -1,0 +1,15 @@
+#+title: SWaV
+[[file:20210126165725-papers.org][Papers]], [[id:CAC3907B-031D-42F8-86BA-85FF61706906][Andreas reading group]], [[file:20210206161400-public_notes.org][Public Notes]]
+
+(We have some [[file:20210126152711-swav_experiments.org][SWaV experiments]] running)
+
+https://arxiv.org/abs/2006.09882: Unsupervised Learning of Visual Features by Contrasting Cluster Assignments. Mathilde Caron, Ishan Misra, Julien Mairal, Priya Goyal, Piotr Bojanowski, Armand Joulin
+
+- Very conceptually similar to our [[file:20210127101746-manifold_proxies.org][Manifold Proxies]] work from 2019, but they got it working!
+
+- The secret sauce is the [[file:20210204112740-sinkhorn_knopp_algorithm.org][Sinkhorn-Knopp Algorithm]], which normalizes the cluster assignments.
+
+- *Question about swapping assignment:* How is it ensured that only full resolution views are used for code computation? There is a [[https://github.com/facebookresearch/swav/issues/19][github issue]] about this but both of us were still quite confused.
+
+* Future thoughts
+- Is this similar to [[file:20210127095517-mixmatch.org][MixMatch]]?

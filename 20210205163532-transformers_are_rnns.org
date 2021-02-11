@@ -1,0 +1,6 @@
+#+title: Transformers are RNNs
+[[file:20210126165725-papers.org][Papers]], [[file:20210128122633-transformers.org][Transformers]], [[file:20210206161400-public_notes.org][Public Notes]]
+Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention
+https://arxiv.org/abs/2006.16236
+
+: Transformers achieve remarkable performance in several tasks but due to their quadratic complexity, with respect to the input's length, they are prohibitively slow for very long sequences. To address this limitation, we express the self-attention as a linear dot-product of kernel feature maps and make use of the associativity property of matrix products to reduce the complexity from O(N2) to O(N), where N is the sequence length. We show that this formulation permits an iterative implementation that dramatically accelerates autoregressive transformers and reveals their relationship to recurrent neural networks. Our linear transformers achieve similar performance to vanilla transformers and they are up to 4000x faster on autoregressive prediction of very long sequences.

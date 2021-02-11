@@ -1,0 +1,21 @@
+#+title: Creative Space
+[[file:20210206161400-public_notes.org][Public Notes]]
+
+The rough draft.
+The blank canvas.
+The whiteboard.
+The temporary folder.
+The scratch disk.
+A space where you can just vomit onto the page and explore new ideas.
+
+I think the *crucial property* of creative spaces is *lack of self-judgment/shame*. You can feel comfortable just dumping shit there
+
+Zero friction:
+- from the tool you're working with
+- from your own anxiety
+- from structure ("do i need to format this a certain way", "do i need to lint", ...)
+- from others
+
+As a fundamentally creative pursuit, [[id:33013B29-EFA3-4A53-9E1C-8F7E222B9F82][Research Craftsmanship]] requires spaces like this to be able to quickly prototype ideas.
+
+People don't often consider the [[file:20210204133357-infrastructure.org][Infrastructure]] needs of creative spaces. Often too much infrastructure imposes requirements on structure, cognitive dedication, etc. that create unnecessary friction.

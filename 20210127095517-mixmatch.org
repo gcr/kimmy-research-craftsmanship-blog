@@ -1,0 +1,42 @@
+:PROPERTIES:
+:ID:       714B90B6-8034-4D54-A765-75978B1EA909
+:END:
+#+title: MixMatch
+- [[file:20210126165725-papers.org][Papers]], [[id:CAC3907B-031D-42F8-86BA-85FF61706906][Andreas reading group]], [[file:20210206161400-public_notes.org][Public Notes]]
+
+https://arxiv.org/pdf/1905.02249.pdf
+
+This is an approach for [[file:20210204121556-semi_supervised_learning.org][Semi-Supervised Learning]] with pretty interesting results:
+: "For example, on CIFAR-10 with 250 labels, we reduce error rate by a factor of 4 (from 38% to 11%) and by a factor of 2 on STL-10."
+
+Typically, previous semi-supervised learning approaches add a loss term that do one of three things:
+- *Entropy minimization:* "Encourages the model to output on unlabeled data"
+- *Consistency regularization*: "Encourages the model to output the same distribution when its inputs are perturbed" (augmentation, like [[file:20210209160908-moco.org][MoCo]], [[file:20210209160925-simclr.org][SimCLR]], but note that these are [[file:20210201152814-self_supervision.org][self-supervision]], not semi-supervised)
+- *Generic regularization*: Encourages the model to generalize well and avoid overfitting
+
+They also apply this approach to [[file:20210209160843-differential_privacy.org][Differential Privacy]] learning.
+
+Re: the entropy minimization related work, they write that
+#+BEGIN_QUOTE
+A common underlying assumption in many semi-supervised learning methods is that the classifier’s decision boundary should not pass through high-density regions of the marginal data distribution. One way to enforce this is to require that the classifier output low-entropy predictions on unlabeled data.
+#+END_QUOTE
+
+Their loss is defined as
+    L = L_supervised + \lambda \cdot L_unsupervised
+where
+    L_supervised = L_Softmax(f(x), y)
+    L_unsupervised = L_L2(f(x), guess(x))
+
+The "label guess" is the average of f(x\prime) for several augmentations of the input.
+
+In addition to this, they also use MixUp to mix the examples/labels in the batch somehow.
+
+* Abstract
+Semi-supervised learning has proven to be a powerful paradigm for leveraging unlabeled data to mitigate the reliance on large labeled datasets. In this work, we unify the current dominant approaches for semi-supervised learning to produce a new algorithm, MixMatch, that guesses low-entropy labels for data-augmented unlabeled examples and mixes labeled and unlabeled data using MixUp. MixMatch obtains state-of-the-art results by a large margin across many datasets and labeled data amounts. For example, on CIFAR-10 with 250 labels, we reduce error rate by a factor of 4 (from 38% to 11%) and by a factor of 2 on STL-10. We also demonstrate how MixMatch can help achieve a dramatically better accuracy-privacy trade-off for differential privacy. Finally, we perform an ablation study to tease apart which components of MixMatch are most important for its success. We release all code used in our experiments.
+
+* Questions
+- MixUp seems to be an important part of training on the unlabeled data.
+  - Why does unlabeled data benefit so much from MixUp?
+  - What would happen if we blindly apply MixUp to previous self-supervised learning approaches?
+- Could be similar to [[file:20210126165853-swav.org][SWaV]] ?
+  - We had originally thought so, but maybe the connection is not as clear
