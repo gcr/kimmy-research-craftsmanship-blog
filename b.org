@@ -1,0 +1,3 @@
+#+title: BBBBB
+
+Link to [[file:a.org][A]]
