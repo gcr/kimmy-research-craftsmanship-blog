@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       BA655B99-2B2E-4260-B96E-A9C0B2C88FEB
+:END:
+#+title: The origin and prevelance of texture bias in CNNs
+[[file:20210126165725-papers.org][Papers]], [[id:CAC3907B-031D-42F8-86BA-85FF61706906][Andreas reading group]], [[file:20210206161400-public_notes.org][Public Notes]]
+
+[[file:20210212092756-what_shapes_feature_representations.org][What shapes feature representations?]]

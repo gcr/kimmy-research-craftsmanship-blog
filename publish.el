@@ -14,6 +14,8 @@
 ;; standard stuff here.
 (setq kimmy/project-dir (file-name-directory load-file-name))
 (setq kimmy/publish-dir (concat kimmy/project-dir "/export"))
+;; Use org-id for links
+(setq org-id-link-to-org-use-id t)
 
 (setq kimmy/head-extra "
 <link href='https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap' rel='stylesheet'>
@@ -44,6 +46,7 @@
          :html-head-include-scripts nil
          :html-head-include-default-style nil
          :html-head-extra ,kimmy/head-extra
+         :with-broken-links 'mark
          :html-container "section"
          :htmlized-source nil
          ;;:auto-sitemap t
