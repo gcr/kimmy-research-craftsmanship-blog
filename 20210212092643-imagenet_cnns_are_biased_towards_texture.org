@@ -3,7 +3,6 @@
 :END:
 #+title: ImageNet CNNs are biased towards texture
 2018
-[[file:20210126165725-papers.org][Papers]], [[id:CAC3907B-031D-42F8-86BA-85FF61706906][Andreas reading group]], [[file:20210206161400-public_notes.org][Public Notes]]
-
+[[file:20210126165725-papers.org][Papers]], [[id:CAC3907B-031D-42F8-86BA-85FF61706906][Andreas reading group]], [[file:20210206161400-public_notes.org][Public Notes]], [[id:5D9B7C82-5E1A-4BAF-8C88-4A2C7ECF2A8C][This Week's Paper]]
 
 - [[file:20210212092709-the_origin_and_prevelance_of_texture_bias_in_cnns.org][The origin and prevelance of texture bias in CNNs]]
