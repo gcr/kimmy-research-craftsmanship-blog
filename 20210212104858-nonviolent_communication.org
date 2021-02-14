@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       6A7145A8-9739-4A94-91A7-136065D75BD9
+:END:
+#+title: Nonviolent communication
+[[file:20210212104903-books.org][Books]], [[file:20210205124105-emotions.org][Emotions]], [[id:5D9B7C82-5E1A-4BAF-8C88-4A2C7ECF2A8C][This Week's Paper]], [[file:20210206161400-public_notes.org][Public Notes]]
+
+- (Ch 2) "Analysis of others are actually expressions of our own needs and values."
+
+"I think you'll find people to be less threatening if you hear what they're needing rather than what they're thinking of you."
