@@ -15,9 +15,6 @@ cd "$TARGET_DIRECTORY"
 
 TAG=20210206161400-public_notes.org
 
-rem " -- git pull"
-git pull
-
 rem " -- new local notes..."
 rg -l "$TAG" "$SOURCE_DIRECTORY" | while read file; do
     if [ "$file" -nt "$TARGET_DIRECTORY/`basename "$file"`" ]; then
@@ -27,6 +24,9 @@ rg -l "$TAG" "$SOURCE_DIRECTORY" | while read file; do
         cp -a "$file" "$TARGET_DIRECTORY"
     fi
 done
+
+rem " -- git pull"
+git pull
 
 rem " -- new remote notes..."
 rg -l "$TAG" "$TARGET_DIRECTORY" | grep -v worksync.sh | while read file; do
