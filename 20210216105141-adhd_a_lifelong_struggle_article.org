@@ -1,0 +1,366 @@
+#+title: ADHD, A Lifelong Struggle (article)
+[[file:20210202233136-reading.org][Reading]], [[file:20210215110428-adhd.org][ADHD]], [[file:20210206161400-public_notes.org][Public Notes]]
+
+https://gekk.info/articles/adhd.html
+
+
+*Author's notes:*
+I have a couple statements I'd like you to read first.
+
+I wrote this in 2018, almost all at once, and in a fit of anger. That's not to say it's wrong, but it's not a clinical, analytical essay, it's an impassioned statement by a person trying to cope. Please remember that.
+
+I have received an enormous number of emails and other messages from people pouring their hearts out to me. I have to apologize to all of you - I didn't reply to any of your messages, I don't have the emotional energy. It does mean a lot to me to hear from you.
+
+Half of the people who have contacted me did it to say they finally felt like they weren't suffering alone, even if they didn't know what to do to improve things.
+The other half did it to say my article convinced them to get treatment that changed their lives.
+I am unable to even form words to explain that feeling. To say I am humbled is inadequate.
+
+I don't know if anything I said here is perfectly "accurate." I'm not sure accuracy is possible with this kind of problem. My situation will not be exactly like yours.
+Please do not take anything I wrote as gospel - nothing I say here means you definitely have this, or definitely don't.
+Just because many people with ADHD have a particular problem with it doesn't mean you should tell yourself "well, people with ADHD have/(problem)/so I must have that problem too."
+
+Good luck.
+
+Listen to this article:[[https://gekk.info/articles/images/audio.png]]
+
+* ADHD - A Lifelong Struggle
+/Updated several times since early 2018./
+
+I'm 31 years old (as of this update in 2020) and I have ADHD. I am done being embarrassed about it.
+
+ADHD has been painted from hell to breakfast as a joke, a sham, and a thing spineless coddling parents use to excuse their children doing nothing all day. It is as invisible and as insidious as depression but nobody talks about it seriously. I don't know that anyone has taken their life over ADHD before, and that's fortunate perhaps, because as much as people disrespect and ignore depression, ADHD is just as harmful. Read on.
+
+Everyone scoffs at it, even your friends who believe it's real. Most people don't even believe that. They may believe it's a diagnosable illness, but they think it's a minor inconvenience. Blaming anything on ADHD feels like a lie, a cheat, an excuse, because that's how it's received. ADHD is real, and after decades of mistreatment sufferers deserve more respect.
+
+** Preface: Bullshit Doctors Tell You
+
+I want to begin by telling you what/doesn't/disqualify you from an ADHD diagnosis. These are actual quotes from followers on Twitter, some of which I know personally:
+
+#+BEGIN_QUOTE
+  //
+
+  "I tentatively brought up the idea of ADHD to my psych who's treating me for other stuff and he said since I can read books it's not likely."
+
+  "You're an engineer, that's not a field that people with ADHD have any success like you in."
+
+  "yeah my doctor said because I didn't doze off in classes I liked I didn't have it"
+#+END_QUOTE
+
+This is/criminally/incorrect diagnostic procedure. These are not valid. If your psychiatrist or doctor tells you this, find a new one. Now read on to learn what/is/valid.
+
+** What It's Like
+I think that for most of human history ADHD was called laziness. I'm lazy as hell. What do I mean? I mean someone can ask me to do a simple task and instead I'll stare into space for three hours. As in,/"that boy has been sittin on that fence for two hours, if he'd just washed the damn thing he'd have been done an hour ago,"/kind of lazy. That's because my brain won't let me focus on things I don't want to do.
+
+If I'm not interested in doing something, I can't process any thoughts about how to do it. No, I don't mean it's not fun, I mean/my brain will not do it./If I don't want to wash a fence, I can't think about how to wash the fence. I go into complete lockup. I ask the question, "how do I wash the fence?" and the answer will not come to me.
+
+I can't get to "first I need a bucket and water." That thought will not enter my head, or if it can, it slips away from me. It pops in and out, getting forced aside by other thoughts about the things I want to be doing or thinking about. It feels like the idea is covered in oil and I keep trying to pick it up and it keeps slipping away from me.
+
+In school I heard this refrain a dozen times a year: "once you get going you do great work! you're just impossible to get going." This was the story of my entire childhood.
+
+I would sit down with math homework and look at the page and tell myself, "the problem says 30 ÷ 5. What's step one?" and nothing would come to me. I'd stare at the numbers on the page, trying to think of what to do first. I write them down with the long division symbol, right? And then... and it wouldn't go anywhere because my head was filled with thoughts. Not thoughts I wanted. Thoughts I couldn't stop. About things I didn't want to care about.
+
+Thoughts about the feeling of the asphalt I laid on during recess at school, because my brain was so active that I couldn't get interested in anything going on on the playground. I just laid on the ground or on a bench and my imagination raced for an hour before we went back to class.
+
+Imagined interactions I imagined having with people I was intrigued by or disliked at school or in my family.
+
+Fantasies about things I would do with my life or things I could have done in situations but didn't.
+
+This stuff would just circulate in my head, neverending. On bad days.
+
+On good days I was unstoppable. I'd sit down and slam through an entire page of work in minutes, much faster than I should have been able to. I was a voracious reader and could devour any age appropriate book in twenty minutes. I did everything quicker and better than my peers when my mind was engaged. But that always, always, always meant I was enjoying it. I had to want it.
+
+The good days, with math for instance, came when I actually got interested in the work. When I figured out some trick for math or was interested in the history I was supposed to be reading about, I got engaged so hard I was disappointed when I ran out of material. The problem is I had no control over this at all. If my brain decided not to engage, I had no control over it.
+
+It's 18 years later, I've been employed for a decade, and it's still going on. I'm an incredibly inconsistent worker. I've been in trouble off and on the entire time I've been working because when I can get engaged with the work I tear through it at a fantastic clip, but as soon as I tune out, I'm out, and that's it. Damn near nothing can motivate me.
+
+Because it's not a question of motivation, but ability to concentrate. If someone comes to me and says "I need to turn this excel spreadsheet 90°, can you figure that out?" I can tear into it because that's an interesting problem. If they bring me something dead boring, I can tell myself, "Okay, we're gonna/do this thing/" as much as I want but it's going to be a slog, just a god damned slog to get myself to even pick it up.
+
+This is the truth. This is what ADHD is. And NOBODY wants to respect it because it sounds so privileged.
+
+Doesn't it? Doesn't it sound/so/convenient, to get to just say, "Oh, no, I won't do that because it's not any fun. Go away. I have ADHD, you can't get mad at me"? Sounds like a hell of a life! Haha no. That's/completely/false.
+
+** Why It Sucks
+You see, ADHD is obsessive, and we don't get to choose what we're obsessed with. It's not a conscious decision and it's not based on our personality. It's/whatever our brains want right this second/.
+
+You know that tired old joke: "wanna hear a joke about ADHD? a guy w-- hey, a squirrel!" I hate to tell you this, but it's true. I hate it, but it's almost completely accurate.
+
+The "anterograde amnesia"-style reaction is a little overblown. But that's part of what's so frustrating about it. I can be in the middle of a sentence, a/really important/one even, and if something catches my eye I can completely forget what I was saying. I'll know I forgot it, but I can't get it back. And yes, I know, this happens to everyone, but imagine if it happened every single time you tried to talk at all. And this usually happens in a matter of seconds.
+
+I can be midsentence and stop to say "hand me that pen" and my last idea is gone because my brain is now thinking about pens. If you think this is fun or funny, you have never experienced it. It's a fucking nightmare.
+
+Do you know how stunted my capabilities are because of this? Do you understand how INFURIATING it is that I don't get to choose my interests, they choose me? I have very little say in my hobbies. I can put myself in front of things but if my brain doesn't latch on, I just don't get to do those things.
+
+I've talked to countless people with ADHD. Everyone says they were described as children the same way: "Smart, but lazy." That's me. My house is full of projects I can't complete.
+
+I started building a network analyzer out of a Raspberry Pi a while back. I worked on it solid for two days and got a really neat menu system built. I was working out the logic for how to proceed in my head, took a break, and the interest dissipated.
+
+For the last two days, every time I wasn't working on that project, I was thinking about that project. It dominated my thoughts, I was constantly imagining new solutions and ways to do things I wouldn't be doing for weeks if I had been able to proceed. And then the thoughts just stopped. And then they wouldn't come anymore. I sat down at that thing four or five times, and each time all I could do was put my hands on it and stare at the screen. When I tried to think about it, when I tried to say/what comes next/, I couldn't do it. I couldn't even form the image of the project in my head anymore. I could get a vague sensation of it, and then it was gone, replaced by whatever took over my thoughts. And then I acknowledged what had happened, put it in a box, and that was eight months ago.
+
+This is why I can't program. Why I can't draw. Why I can't perform music. Why I can't sew. Why I haven't written a book and why I didn't start putting stuff on my website until this year. More on that later. The number of things I have wanted/desperately/in my life, acquired the resources for, and just been completely unable to concentrate on, is so immense it's heartbreaking to even try to list it all.
+
+I can't do everyday things because I can't remember them. I can't responsibly own pets, for instance, because I can't remember to feed them. It works like this:
+
+#+BEGIN_QUOTE
+  I get up in the morning and the cat meows at me. I think, "I need to feed him." But I need to go to the bathroom first, so I do, and then I go downstairs because I forgot about the cat.
+
+  Half an hour later the cat comes down and meows at me. I think, "Oh, I need to feed him. I'll finish typing this message and go do that." I keep typing for two hours because I forgot about the cat after five seconds.
+
+  Another half an hour later, the cat comes down and meows at me. I think, "Oh, shit, I forgot! I'll do it right now!" I stand up, pick up the dirty glass that's on my desk to bring up to the kitchen, and go upstairs. When I get there I put the glass in the sink, then go back downstairs. Because I forgot about the cat.
+#+END_QUOTE
+
+What else do I have trouble with? Everything.
+
+I've gone four days forgetting to shave because every time I thought about it I wasn't immediately next to the bathroom and ready/right that second/to go do it.
+
+I can't shop without a shopping list or I'll forget, almost consistently, all the most important things I needed.
+
+Even if I have a shopping list, I will consistently forget to look at it. My brain will decide that I've memorized what's on the list and when I say to myself, "I should look at the list" I will, involuntarily, feel myself lose the conviction to do that. The psychological term for this is "executive dysfunction," I believe.
+
+Reminders don't help. I tune them out. If I put a post-it on the fridge, my brain just filters it into background static instantly. I've had post-its on my computer monitor at work for literally a year telling me to do things I actually do need to do, and if I try to read them I can't focus on the letters. My eyes bring them into focus, but when I try to understand the words, they/feel/like they're blurry.
+
+Timers and reminders on my phone don't work. They go off, I mute them or put my phone back in my pocket, and by the time my hand is back at my side I've forgotten what I was supposed to do.
+
+** Nobody Believes Us
+One of the most important things I want to say is this: If you have ADHD, or think you might, it is not petty.
+
+The fucking 90s. Scoffing GenXers and Boomers rolled their eyes and said it was all made up. They said we were whiny. They called us everything they call millenials now except they didn't have the word yet.
+
+ADHD is debilitating. It is not a "kid disease" and it doesn't make it "harder" to do things.*It is a fundamental difference in the way brains work*.
+
+ADHD means you don't/have/the ability to "buckle down" and "just get to it," or if you can, it requires MUCH more effort. WAY more effort than for someone without this condition. ADHD means you can't begin a task until you trick your brain into wanting to finish it.
+
+If you have ADHD, everything you've ever accomplished was done this way even if you don't realize it. How functional you are with ADHD depends on its severity but also on whether you learned, by chance, how to trick yourself. Some people pick it up on their own but others need help. If they don't get it, they just get left behind.
+
+THIS IS A SERIOUS ILLNESS
+
+This is like having depression
+
+This is like having diabetes
+
+You are not lazy.
+You are not stupid.
+You are not incompetent.
+You are laboring under a terrible restriction.
+
+Starting right now, you need to accept this. You need to look at yourself in the mirror and see someone who is fighting a disease, not an apathetic loser, not a failure.
+
+ADHD is a sickness. It is a mental illness and it handicaps our brains so that they aren't ours anymore. They are their own free agents and our personalities are drug along for the ride as they free-associate from one interest to the next. We are unwell and we deserve sympathy, not judgment and mockery, but instead we get treated like stubborn children and scoffed at.
+
+You can change this. You can turn to someone who's rolling their eyes at you and put venom in your voice and say "Do you understand what this is like?" You can/make them feel bad./
+
+You can do it, but you have to CONVINCE YOURSELF that you are sick. And then you have to tell yourself, "They just mocked my cancer." Convince yourself that "haha guess you got distracted by a squirrel" is the same as saying "oops, don't give a cookie to Sarah, she'll die."
+
+You can get mad. You can put acid in your voice and rage in your eyes and "fucking try me, buddy" in your body language, and you can make them walk away hanging their heads in shame. I have done this, in real life. And when you do, you will respect yourself more and punish yourself less.
+
+And we all punish ourselves. That's the real tragedy of this illness. We are our biggest detractors because we/know what we're capable of./Better than our teachers. Better than our parents. They always said that they could "see our potential," but we saw/ten/times what they did. Every day. We saw the things we could do, in our heads, and hated ourselves for not doing them.
+
+My teachers knew I could write a novel in fourth grade. I knew I could write the Wheel of Time if I could just CARE ENOUGH.
+
+Every time I got complimented on something I accomplished, I saw in my head what I wanted to do, what I intended to do. Yeah, I wrote 20 pages, but I envisioned 30. 20 is what I got out in thirty minutes after staring at the wall all night and then finally getting scared enough of getting in trouble that buckling down became possible.
+
+My head is full of ideas, all day. I want to create, I want to accomplish. But everything creates a blast of static in my head that I can't penetrate. If I try to think about anything I either can't at all because I just slide off of it and onto whatever my brain wants to think about, or as soon as the idea enters my head I'm assaulted by a cacophony of related ideas. I can't think about step 1 because my brain is already thinking about steps 6 and 7 and worrying about things that aren't yet relevant so I can't even take the initial steps.
+
+Even for the things that I/want/to do, getting started is hard. Suppose I'm at work and I think, "I need to send an email to <people> about <issue>." Before I can do anything, I'm already thinking about the issue.
+
+I try to write the email, but as I'm writing it, questions fill my head. I try to push them aside and just concentrate on the initial task,/send a simple email/, but the questions keep hounding me. I have to stop and get answers to them or I can't think about the email. And if I can't get answers, I'm stuck. I just can't proceed. I end up staring at the empty compose window for ten minutes, writing the first sentence over and over, because my mind is so far out of the game I can't even do basic grammar.
+
+I can only do tasks in one big shot. If I know I'm going to have to stop, if I know I'm going to be interrupted by some other dependency, I can't even get started. And most of the time, that dependency can't be satisfied/unless/I take the first steps.
+
+An even worse situation is when there are multiple questions feeding into each other, questions that affect other questions. I end up in total paralysis, deadlocked by competing priorities.
+
+I work at a VoIP phone company. I think, "I need to configure this phone and get a power supply for it." This turns into hours and hours of... indecision, almost, but not quite, because I can make decisions but they/don't work./
+
+I can put my foot down and say, "The config comes first," but before I even get a dialog open on my workstation I'm thinking about the power supply. DO I have one? Do I need to borrow one? What if whoever has one leaves before I can talk to them?
+
+OK, I decide, I'll go get it. Before I can even take my first step, the complexity of the config process comes back to me, and I think/shit, I need to do that/.
+
+If you don't have ADHD as bad as I do, you may think what I'm about to say is a lie. I need you to understand that this is 100% sincere:
+
+*I will actually end up standing at my desk, jerking in one direction or another as the impulses fight each other.*
+
+I read the email I'm trying to respond to. I think about both the tasks I have to do. My head hurts and there's something else I was working on, so I go look at that. 15 minutes pass, and suddenly I remember that I need to go get the power supply. I start to take a step, and then my body slams to a halt as I remember I need to make the config. I turn back to my desk, and then the thought comes to mind that I need to get the PSU before it's too late. This can go on indefinitely.
+
+Fear is not a consistent motivator, but it looks like it at times. It works often enough to fool everyone, which makes things worse in a way.
+
+Sometimes fear of punishment, of lost opportunities, etc. seems to punch through the haze and help you focus. At least enough to do the minimum. But your bosses (and parents and teachers and roommates and) look at this and say "Oh, they can do it if they really want to."
+
+This is why we all got told to put our noses to the grindstone, to "apply ourselves." Because they HAD seen that work. They had yelled at us, told us we were going to be punished or expelled or fired, and then seen us shape up. So let me tell you about the times when it didn't work.
+
+I've been nearly fired from every job I've had because I couldn't do basic tasks. I was given a long rope every time because they could "see my potential" and didn't want to lose me as a resource. And even at the zero hour, with unemployment looming, it was the hardest thing in my life to push through the brain fog and Get It Done. And every time I had to push myself that hard, I did piss poor work.
+
+This is why everyone thinks we're just lazy. They see us "get our act together when it counts." They don't see all the times we tried that and failed, leading up to the crisis that finally pushed us enough.
+
+** It's Not Fun
+Another thing I want to emphasize: This condition isn't "fun".
+
+I've been asked before if I've ever been bored. And in a lot of senses the answer is no. I always have my imagination going, it's always making me think about things in incredible detail. But I don't get to choose what those things are. Sometimes you hyperfocus on something fun, sometimes on something dumb.
+
+When I was fourteen I shirked all responsibilities and spent three months reading about vintage cameras, because that's what my mind latched onto. Every second that I wasn't reading about them I was thinking about them. I wasn't/doing/anything, just consuming webpage after webpage of info about cameras from the 50s, 60s, 70s.
+
+I got something out of it. I'm a good photographer now, because my obsession made me want to go out and take pictures, and I did, even when I had nothing to take pictures of, because it was the only thing I could think about. Was I "having fun"? I wouldn't say I was. I just had no other interests, no other desires, no other motivations. And I spent countless hours just staring at websites reading about stuff, and got nothing for it other than an immense knowledge of photographic trivia.
+
+Meanwhile there were other hobbies I wanted to focus on which sat by the wayside. I wanted to write, learn to draw, learn to program, play an instrument. I wanted to do those things, but my mind wouldn't let me. Photography is all I was permitted to think about.
+
+In other words, this disease is not an "excuse" to "slack off" or "have a good time while everyone else is working." It's not a "convenient excuse" for not doing tedious things. It's not convenient. It's not fun. It's fucking miserable.
+
+I don't want to be a bad employee. I do better on some days than others. I want to be incredibly productive, because as much as I hate capitalism, I have a work ethic and I want to achieve it. On days when I can't get myself to do hardly anything at work, I feel/terrible/because I WANT TO DO MY JOB. I DON'T LIKE BEING THIS WAY. I DON'T LIKE BEING A LAYABOUT. BUT I CAN'T CONTROL IT.
+
+I want to come to work and put my head down and power through the day and feel accomplished even if all I did was labor for someone elses profits because/that is better than finishing the day with absolutely nothing to show for it for anyone./
+
+** Getting Treatment
+There are treatments, as in drugs, but they aren't very consistent ones and the politics are muddied as hell because of the godforsaken DEA.
+
+The primary drug is amphetamines such as Ritalin or Adderall. These are exactly what they sound like: stimulants. If you take a substantial dose you'll get fucked up, so they're prone to abuse. Hence, they're scheduled drugs. I don't want to talk about it in detail but I hate the DEA and I hate the war on drugs for causing countless people to be denied medication they really need, and this is one of them.
+
+Many doctors simply won't prescribe it. After the mid 2000s any request for stimulant ADHD medication to a GP is treated with suspicion and denied unless you have the order of a psychiatrist. Psychiatrists are much the same way except you might/eventually/get the drugs - if you run their gauntlet of Lifestyle Changes and try other drugs first.
+
+Don't take this to mean you shouldn't try to get them. Several people, after reading this article, went to their GPs and got prescribed drugs that changed their lives.*Do pursue this. Do try.*
+
+The other drugs are, for the most part, bullshit. I was on Strattera for a while, which had no effect and made me sink into a deep black hole of existential despair every night until I started refusing to take it. I've heard much the same story with the other non-stimulant meds.
+
+And on top of that there's the "zombie problem." The stimulant drugs work/great/- on some people. Others get turned into zombies, barely able to take care of themselves and drained of personality. Usually this happens when they're children, and the parents and doctor deny it's happening for long enough to cause trauma. Then that person goes on to distrust the drugs forever, and who can blame them?
+
+Even if the stimulant drugs work, they don't work consistently. Some days they do, some days not. And over time they lose effectiveness, until you're having to up your dose regularly to keep things working.
+
+In other words, though you might have luck with the drugs and you/should/pursue trying them, ADHD is just something you live with. So the least we can have is some sympathy and understanding.
+
+** How To Cope
+Coping with ADHD sucks. It's miserable. I've found nothing that works consistently. I'm going to tell you about what I've tried and what I've had some success with.
+
+*** Getting Important Things Done
+This first part focuses on the "executive dysfunction," forgetfulness and unreliability aspects.
+
+First, stop blaming yourself. I don't mean let your ADHD be an excuse for everything, but*stop letting yourself feel like shit for not being normal.*This isn't your fault and you aren't making excuses. You aren't worthless. You are affected by a disorder, and while that shouldn't be a reason to give up on everything and just accept failure, you/must/start forgiving yourself. You/must/cut yourself some slack. You absolutely must, if you want to be happier.
+
+Second, start demanding forgiveness and understanding from others. This won't work with everyone. Your boss probably isn't going to do it - but if they're open to a conversation, have it. I did, with a boss that was understanding, and they started making accomodations for me that took me from the brink of getting fired to a top-performing employee.
+
+#+BEGIN_QUOTE
+  It's been years since this occurred and I can't remember exactly what we discussed, but here is the crux of it:
+
+  - We agreed that my condition was legitimate. This is important because it meant I wasn't hiding it. That didn't mean I couldn't get fired by failing to get things done, or that infinite excuses would be accepted; it meant I could/complain about it/and/plan around it/without worrying about getting sneered at.
+  - We agreed that I was a valuable employee that they did not want to fire. This is important because it meant any conversation about my disability had a baseline of "we both want to make this not matter, rather than punish me for it."
+  - We discussed what things are hard for me to achieve. This is important so my boss could tailor the things they asked of me. As long as I get things done, it shouldn't matter how they request them. It is a managers job to make their employees productive; part of that job/ought to be/presenting tasks in the most palatable form.
+  - We discussed what things would help me. This is important so my boss could know that by doing these specific things, they would not need to continue worrying about whether I was getting things done. In other words, since I can't be relied on to work like neurotypical employees, I told them what/would/make me reliable.
+  - Ultimately, and perhaps most importantly, I made it clear that I was not going to be able to deliver what other employees could, and we agreed that this was acceptable to a point. I am not interchangeable. There are things I can't do, that other employees should be tasked with instead. I believe any sensible boss understands this, and should never get upset that an employee is not as good at a particular type of task as another.
+#+END_QUOTE
+
+/if that is your goal/
+
+With your family, friends and romantic partners though? Put a stop to it. Put your foot down. Tell them, "I am sick and I will not be shamed for it."
+
+Now, that/does not mean/that the people you are close to have no right to be/upset/. If you forget to mail the rent check after being reminded and agreeing to do it for four days in a row, your roommates get to be angry. And you should feel bad, if you're trying to get better. You shouldn't feel like you have the license to screw up - if you think you absolutely can't be relied on, you need to not accept responsibilities. But if you're accepting tasks, you need to feel bad when you don't get them done because that will be the motivation that helps you develop better habits./Bad/, however, is different from/ashamed/.
+
+There is a difference between "God damnit, you didn't get the rent check in," and "God damnit, you asshole, you didn't get the rent check in." Frustration is natural, but what you need to impress on people is that you didn't fail to do the task out of lack of respect for them or lack of appreciation of it's importance. You accepted that it was important and wanted to do it,/but you were unable to./
+
+Now let's talk about becoming more reliable. All of this has to do with improving your habits.
+
+First, do everything as immediately as you can. It's the best advice I can give. It's worked better than anything else. When you realize you need to do something, if you can do it now, drop what you're doing and do it right away. Don't let yourself get stopped or distracted on the way to the task. If need be, repeat the task to yourself under your breath as you head to it.
+
+Next, if you can't do something immediately, set up a reminder. If you don't have a smartphone, do you have someone who can remind you? Ask them to remind you at a time when you'll be in a place to do it.
+
+If you do have a smartphone, use reminders. Personally I think third party reminder apps are all garbage. I can't fully explain why so I'm not going to try. Check them out if you want, give them a shot, a lot of them have great features. I only use the built in ones, though.
+
+When you realize you need to do something later, set a reminder. Don't try to be precise; ballpark it. Set it to the earliest time you think you MIGHT be able to do the task. If that time comes and the reminder fires and you aren't in a place to do it, when you pull your phone out and see the reminder, immediately make a new one or update the time on the existing one to push it forward to the next time you think you'll be able to do it.
+
+Never let yourself think, "I'm busy but I'll be free in five minutes and I'll do it then." You will pull your phone out two hours later, see the reminder still on the screen, and kick yourself.
+
+A day planner may help if you have trouble remembering what's happening in the future. I found that if I scheduled social activities (seeing a friend, going to a show) I would consistently forget when I had them planned. Reminders didn't help because I wouldn't think to scroll through them. Calendar items on my phone didn't help and I'm not sure why, but years of trying this and it never got better. I bought an actual paper day planner and since then I haven't had any trouble with scheduling mixups.
+
+#+BEGIN_QUOTE
+  *Update:*It worked for 2-3 months. I haven't touched it since then and everything's a wreck again. I know why, and I'll explain. I call it the Scorched Earth Effect.
+
+  The problem with "systems" is that they are authorities. They have to be. If you decide/"I'll prioritize things with a stack of notecards"/then*you are telling yourself the following:*
+
+  /"The notecards replace my own brain. Everything that I do must be on a notecard. If it isn't on a notecard, it can't be done. If I want it done, it has to be on a notecard."/
+
+  The problem is that when you have a crisis (a day full of emergencies) that forces you to break from this system you will lose all respect for its authority. Your brain will learn that it/doesn't/have to respect the notecards, that they aren't in charge, and this sense of freedom is addictive and will persist. Most ADHD sufferers have left a trail of systems - notecards, whiteboards, lists, post-its, apps, alarms - that worked great for [a month, a week, three days] but are now dead to them, scorched earth we can't return to.
+
+  I have no idea what to do about this.
+#+END_QUOTE
+
+*** Getting Fun Things Done
+This part focuses on getting the things done that you want to do, the hobbies and activities you have trouble focusing on.
+
+This is one of the most depressing aspects of ADHD. You can be a screwup who makes mistakes constantly and never handles their responsibilities and get by with an okay self esteem, but if you can't even have fun or indulge creative desires effectively you're going to be miserable.
+
+I had trouble committing to creative projects for most of my life. In the last couple years I've started resolving those problems, and my primary solution was to emphasize positive reinforcement.
+
+I don't know if you'd agree, but my impression is that a major cultural zeitgeist is the idea that "you shouldn't need anyone elses approval, you should live for yourself." This simply doesn't work for me. I'm not sure it works for anyone, but it definitely doesn't work for me.
+
+I live for others approval because it's what keeps me going. The way I motivate myself to create is by telling myself the reward will be other peoples interactions. It's what's making me do this. Intellectually, I'm writing this because I feel a need to help other people. On a cognitive level, the reason I'm able to put pen to page as it were is because I told myself I'll get a lot of thanks and start a lot of good conversations online with it.
+
+It's why I was able to start a Youtube channel. It's the only thing that makes it possible for me to keep trying to learn music. It's the reason I do just about anything other than pure consumptive recreation like watching TV or playing a videogame. I motivate myself with others approval, and within reason, I can't tell you not to do this yourself. If you can create a following online, or at least know people on social media who will give you the feedback you need to do the stuff that you want to do, milk it. Leverage it. Do it.
+
+It's how I motivate myself at work. The things that/really/get me moving, the things that I can really get cracking on and do amazing work on, are things that will impress people. And I just let that power me.
+
+This is the best advice I have. I hope it helps you. Good luck, and please love yourself.
+
+** Addendum: Pride And Shame Are Bastards
+There is a pit that we all wind up in. No matter how self-aware we are, no matter how much we tell ourselves that we have a disadvantage that we may need help with, we still tell ourselves this awful, self-defeating lie:
+
+/"I know I can set reminders and change my habits, but if I can't do it like a normal person would, I'm a failure"/
+
+Listen closely:*Cancel that shit.*You're beating yourself up for no reason.
+
+This is your one life. This is now. This is happening. Maybe you can/hate/your way out of ADHD but, just saying: I've never seen anyone pull that off.
+
+There are three reasons we do this: Pride, shame, and anxiety.
+
+Pride, because we all know we're "smart kids" (our parents and teachers told us so every time they scolded us) and we "shouldn't need" help. Bullshit. Everyone needs help. Take what you need and tell your pride to go to hell.
+
+Shame, because we feel like everyone else can do this but we can't. Bullshit. Most people are struggling, if not with ADHD than with something else, and everyone with ADHD -/everyone/- is going through what you're going through. Trust me. I've talked to a/lot/of people, and even the ones who have great accomplishments to their name still deal with everything I've described and feel crushed under the weight of it. Just like you.
+
+Anxiety, because we think that the tricks and techniques we come up with to get through this are "crutches" that we might not have someday. Bullshit. Use what you can while you can.
+
+What if you don't have an internet connection later? You have one now, so you're using it. What if you don't have a job later? You have one right now, so you're spending money. If you aren't learning Braille/just in case/you go blind, don't force yourself through that process with this. Take the hand that's offered.
+
+If you can get on the drugs, get on them now. See if they work. Maybe they'll work so well that you'll blaze through a bunch of things you always wanted to do, and even if you stop taking them or can't get them later you'll still have those accomplishments. Maybe the emotional impact of seeing yourself finally achieving things will be so encouraging that it'll eradicate your feeling that you can't accomplish anything - speaking from experience, it will.
+
+If you have a smartphone, start using the reminders right now. It doesn't matter if you don't have internet everywhere, it'll work when you do, and you'll be no worse off when you don't. Use the voice recognition if you have it, and/don't/beat yourself up about translation errors. A reminder that says "take the harmful ham town" is more effective than one that says "take the garbage can out" that I didn't set because typing it out was too tedious.
+
+Don't let yourself do what/smart people/do: shoot yourself in the foot by trying to plan ahead for every contingency, every single possibility, and in doing so, never accomplish anything at all because you're afraid of a possible problem in the future. The problems will come one way or another. Take the easy way out while you can.
+
+* Addendum: Living With An ADHD Sufferer
+This is a messier subject. I am going to say things that will make everyone feel attacked regardless of what side of the issue they're on. Please understand that all the behavior I'm going to describe, while harmful and counterproductive, is/understandable./That doesn't mean it shouldn't change.
+
+** The Problems
+There are three big issues with ADHD sufferers. Self-awareness, self-acceptance, and stigma.
+
+*Self-awareness:*Many people were never diagnosed. Cultural depictions of ADHD are as accurate as depictions of any other mental illness - that is, not in the least. Most people who I've described my experience to say, "Wait, that's ADHD? I had no idea. I thought that was just how I was. I thought it was a personal failing." You may be the first person who's ever told someone that they may have this condition.
+
+*Self-acceptance:*I wrote this article in the first place for people who have it, know it, but for one reason or another will not acknowledge its effects on their life. The most common reason, I would think, is that they believe the misconception that used to exist, that ADHD is a "childhood illness" that goes away over time. The psychiatric community, as I understand it, acknowledges that 1/3 to 2/3 of children retain symptoms well into adulthood. They also may not understand that ADHD is the cause of their problems. You may be the first person who's ever told someone that they are still being affected by this condition.
+
+*Stigma:*Our society deeply stigmatizes the behavior of ADHD sufferers. They are called lazy, apathetic. Failure to accomplish tasks is taken very personally as an indication of bad character: "if you really cared you would have done what I asked" or "if it really mattered you would have remembered." These are/extremely/traumatic accusations, often coming from parents, family and lovers.
+
+An ADHD sufferer, almost without exception, has been accused of/being a bad person/at least once in their life by someone they cared deeply about. The times they tried to explain that ADHD was the root of their failures were treated as disingenuous "excuses" intended to let them slide. And, on that note, and most importantly, ADHD does not get better. It is a lifelong condition, to the best of anyones knowledge. Drugs may help, coping may help, but/this is how you are./The mistakes you make because of it are ones you will probably continue to make, especially if you don't have access to medication or effective coping mechanisms and assistive tools.
+
+Unfortunately for ADHD sufferers, the specific mistakes that they make are ones that strike a nerve with many people. To understand how to live with them easier, you need to understand what's going on in their heads.
+
+ADHD sufferers are often unreliable, and cause harm inadvertently as a result:
+
+#+BEGIN_QUOTE
+  /"You SAID you would take the power bill to the post office, and you didn't, so now we have a late fee! Again!"/
+#+END_QUOTE
+
+This kind of confrontation goes poorly for one specific reason: the accused person responds, "I'm sorry, I really meant to do it," and then a critical error, "it won't happen again."
+
+I don't want to say, "this will never get better" or "you cannot ever be reliable," because it isn't true. But an ADHD sufferer's knee-jerk reaction is self-blame. "Oh my god, I really messed up, and it's bad, and/I should have cared enough to get this right/, and I'll do better next time." They're wrong about why they messed up. They think they have bad priorities - and thus, they think/they are a bad person/- and this creates a feedback loop, where each time they mess up they remember that they promised to improve, and that makes the shame intensify. The more times they've done it, the worse the shame is.
+
+And believe me: ADHD sufferers know how many times they've forgotten to take the trash out on trash night. But you may be the first person to ever tell them it's okay to mess up.
+
+** The Solutions
+So, here is my advice on how to help someone who has ADHD. A partner, a family member, a friend, a coworker or a subordinate, though I'll just say "friend" here to save space. Whether you're neurotypical or even if you have ADHD yourself, these things will help.
+
+First, you need to drop the judgment. That doesn't mean you can't get upset that your friend messed up. It means that you need to remind yourself to think of ADHD before you think of malice, and you can't personally attack them for a specific error. It's counterproductive and harmful.
+
+If your friend forgets to take the trash out for the second week in a row and you lose your shit because you now have nowhere to put trash and the apartment stinks, yes, you're going to get angry. I'm not telling you to hold all that back. If you have to blow up, blow up, but you need to keep one finger tensed to hold back the ad hominem, the "christ, you ALWAYS do this," and the "are you even TRYING" and the "why don't you GIVE A SHIT."
+
+Second, you need to express that you understand and that you're prepared to offer forgiveness as long as your friend is doing their best. This part is critical: I am not here to tell you how to treat your friends. I do not subscribe to the notion that I can tell you, a perfect stranger, the grounds upon which you can eject someone from your life etc. However, a healthy approach to coping with ADHD requires both acceptance/and/feedback when mistakes are made. ADHD does not mean your friend gets carte blanche to screw up all day and never apologize for anything. If they want to do better they still need to make an effort.
+
+Third, work with them to develop solutions. People with ADHD do not get a pamphlet with coping skills and they have to be tailored to the person. Discuss things you have frequent issues with and come up with solutions ahead of time./Accept a certain amount of blame when things go wrong, if you deserve it./If part of the solution that you/agreed on/was "I will remind you to do/thing/at 3PM" and then you don't do it, your friend is/less/culpable for forgetting. If that feels unfair, ask yourself: are you looking for a solution to practical issues, or upset that your friend isn't "doing the right thing"? The latter is a bad look, in my opinion, if you care about them. However, it's up to you to decide how much emotional labor you're willing to perform for that person. I cannot make that determination for you.
+
+Fourth, point out possible gaps before they happen. Remember that the ADHD is self-reinforcing - the same inability to remember to do tasks keeps people from remembering to use their coping tools and techniques. So when your friend says, "okay, I'll take the trash out," you can reply, "set a reminder on your phone." If your friend has been significantly traumatized by past conflicts they may react to this poorly, because it can feel like someone saying, "I know you're going to screw up," before they've even had a chance to try, so a rapport and understanding have to exist. You can also offer, "I'll bug you again in an hour" and set a reminder on/your/phone. Again, if that feels unfair, consider what your desired outcome is.
+
+Finally, encourage your friend to/not/take tasks they feel uncertain about. Like almost any mental health issue, there are good and bad days. If they don't believe they're up to a particular task and are stressed out by worries about failure, it may be best to say, "I don't think I can promise to get that done." Again, this requires a rapport and understanding and has to be used in moderation so it doesn't turn into hermit behavior.
+
+I hope these methods help you develop a better relationship or a more functional home. Good luck to you and your friends.

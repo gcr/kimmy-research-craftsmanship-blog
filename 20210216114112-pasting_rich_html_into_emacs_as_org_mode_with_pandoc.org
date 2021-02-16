@@ -1,0 +1,19 @@
+#+title: Pasting rich HTML into emacs as org mode with Pandoc
+[[file:20210206161400-public_notes.org][Public Notes]]
+
+A cool pandoc trick! Use the following filter file, saved to, like, =~/.pandoc-filter-strip-styles.lua=:
+#+begin_src lua
+return {
+    {
+        Div = function(elt) elt.attributes.style = nil; return elt; end,
+        Header = function(elt) elt.attributes.style = nil; return elt; end,
+        LineBreak = function(elt) return pandoc.Str "\n"; end,
+        Span = function(elt) return pandoc.Str ""; end,
+    }
+}
+#+end_src
+
+Then use the following shell script!
+#+begin_src shell
+osascript -e 'the clipboard as «class HTML»' | perl -ne 'print chr foreach unpack("C*",pack("H*",substr($_,11,-3)))' | pandoc -f html-auto_identifiers --lua-filter ~/.pandoc-filter-strip-styles.lua --wrap=none -t org
+#+end_src

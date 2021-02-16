@@ -1,2 +1,185 @@
 #+title: Friendly Ambitious Nerd
-[[file:20210212104903-books.org][Books]], [[file:20210206161400-public_notes.org][Public Notes]], [[id:5D9B7C82-5E1A-4BAF-8C88-4A2C7ECF2A8C][This Week's Paper]]
+[[file:20210212104903-books.org][Books]], [[file:20210206161400-public_notes.org][Public Notes]]
+
+i like this book but it very VERY much suffers from intellectual dudebro rationalist syndrome. edgy for the sake of being edgy. i say that while agreeing with the message.
+
+* 1-page summary of the whole book
+
+#+begin_quote
+*FRIENDLINESS* is about being a nourishing presence. It’s about becoming somebody who people (including yourself!) love and enjoy. It’s about creating supportive, encouraging spaces where people can feel comfortable sharing their honest feelings. Humans are a social species, we’re practically wired to desire kinship, to be a part of something bigger than ourselves. So why not get good at it? To be a great friend, I believe that it’s necessary to learn to address your own neediness and insecurities, and to cultivate an abundance mindset in relation to other people. Learn to give sincere compliments, to be a gracious host, to be artful in conversation, to always be a cherished asset in any social space you inhabit.
+
+*AMBITION* is about daring to dream bigger. It’s about realizing that you can live a much “larger” life. Ambition is often framed as the desire for power and prestige. I prefer to frame it as something more intimate. Ambition to me is about wanting to do more, be more, see more, learn more, know more. It’s about recognizing that your own imagination is a bottleneck that limits the amount of good you can create in the world. Untethered ambition by itself can be a dangerous thing, but if you temper your ambition with good taste and ground it with a sensitivity to others, I believe it can be a force for tremendous good.
+
+*NERDINESS* is about cultivating taste and curiosity. It’s about developing the courage to be honest with yourself about what you find interesting. A lot of what is beautiful in the world was made by nerds – music, technology, science, movies, books, you name it. It’s a fundamentally nerdy thing to decide to sit down and spend years of your life exploring your interests. Doing this is a joy in itself, and it’s also a great gift that you can give to others. To be a nerd is to liberate yourself from over-preemptively worrying about what other people think. By doing the nerd’s work, you will develop a healthy, rigorous and honest regard for your own opinions. You’ll find, delightfully, that others start valuing your thoughts more, too!
+#+end_quote
+
+
+
+* Practice good reply game
+
+#+begin_quote
+[[https://twitter.com/visakanv/status/1039420186586038273][There is an art to replying and commenting]], and probably like 60-70% of people I’ve seen on the internet seem to fail at it. The important thing is not to speak your mind, but to “support” the person you’re replying to. You can support them by disagreeing well, and you can “mis-support” them by agreeing poorly.
+
+Every “utterance” (status, tweet, whatever) is a bit of an invitation, a bit of a proposal. “Let’s play this game”. When strangers read the proposal accurately, and support the game, a shared understanding develops. You can make friends this way.
+
+Some people deliberately choose to ignore, misread, disregard or denounce other people’s bids. Others are outright clueless and don’t know how to play, and sometimes cluelessness leads to worse bungling than deliberate malice (JJ’s razor: “The intentionality of an agent with behavior sufficiently indistinguishable from malice, is irrelevant.”)
+
+I was a lot more belligerent and disagreeable when I was younger, in part because I simplistically thought playing other people’s games was a sheep-like way to live. Why should I support other people’s dumb games? Why not mock them instead? It’s easy, and intoxicating.
+
+We can’t choose where we are born, or our family, and our initial set of friends is heavily influenced by happenstance. But we can choose who we want to be associated with subsequently. All problems are interpersonal problems, but we kind of get to choose which ones we want.
+
+Many different lines of enquiry have led me to this same conviction:
+
+The best guiding question in life is, “Who do you want to share this life with?”
+
+Everything else can be derived from this question. Your ethics, beliefs, actions, habits.
+#+end_quote
+
+
+* Asking good questions
+[[file:20210205124105-emotions.org][Emotions]], [[file:20210205224533-agitation.org][Agitation]]
+
+Thread: https://twitter.com/visakanv/status/1132522321854418944
+
+#+begin_quote
+When it comes to interviews, conversations, flirting, [[file:20210205224533-agitation.org][Agitation]], conversations and flirting, the most powerful isn’t asking good questions nearly as much as asking good followup questions - it’s being sensitive to interesting micro-reactions. When you ask a question and they respond “Ha... no”, and you go “Why’d you laugh?”
+
+This is the script of no script, the formula of no formula, you just pay really close attention to the other person in a curious, non-judgmental way without the burden of expectations, and look for anything surprising or interesting - and ask about that in a supportive way.
+
+If you do this well, over the course of a conversation you’ll end up asking questions that make them go “huh, nobody’s asked me that before” and “I’ve never really thought of that”, and that often ends up being quite a bonding experience.
+
+Little things like “you hesitated for a moment there, why?” can unearth things you won’t believe.But you have to do it in a very kind, nurturing and gentle way, or people will get defensive. You want to be so curious about people that you make them freshly curious about themselves.
+
+My ex-boss gave me this gift. He was more curious about me than I was about myself. He genuinely wanted to understand my motivations & backstory to a degree that I had stopped caring about, because I didn’t think I merited that much concern. a lot of what I do now is pass that on.
+
+Everybody needs this, but nobody needs it more than kids. Kids are so used to being pushed around, told what to do, being treated as incomplete humans on probation. Give kids your sincere, attentive curiosity and you will change their lives forever.
+
+Also, kids are fascinating! Particularly because they haven’t been fully socialized yet. They each still have some weirdness and oddness in them unique to themselves. It’s quite inspiring and humbling to witness if you can.
+
+Thinking more, I realize this is about paying attention to people’s physiological responses & being supportively curious about that. Why did you cringe, why did you flinch? Why did you frown, shudder, laugh, scoff? The body keeps the score. IRL still trumps URL here.
+
+All of that said, if you need a starting question to surface and unearth responses to ask further about, “what is your relationship with X” is my favorite. What is your relationship with fitness? With food? With the internet? Then observe closely.
+#+end_quote
+
+* The seductive peers and the (often misleading) promise of escape
+:PROPERTIES:
+:ID:       6A08CFF6-7A3B-43E0-9BE3-93811EC90E86
+:END:
+[[file:20210214123924-radicalization.org][Radicalization]]
+
+#+begin_quote
+In contrast to all of that, the first person who offers you your first cigarette or drink tends to appeal to your independence. They’ll ask, “Why are you worried about what other people think?” It’s a question you might not have even thought to ask until that point.
+
+And they’re usually really sweet in those moments. They’ll look into your eyes and treat you like a full person, a full adult, not a child, not an obligation. They seem sincerely interested in you, your struggles, your concerns.
+
+It is INCREDIBLY flattering. It goes beyond “Wow, you’re pretty.” It’s more like “Wow, you’re YOU.”
+
+*And so I think when people say yes to cigarettes, to unprotected sex, to staying out late, THAT’S what they’re saying yes to.* Every kid knows cigarettes are disgusting. *We do scary, dangerous and unfamiliar things because for the first time it seems like someone truly cares about us- not just our grades or our health or the labels on the pedestals they put us on.*
+
+Some people dismiss all of this as childish rebellion- and yes, it is. But it’s so much more than that, too. It’s a naive, ignorant and tentative step towards independence. When do you learn who you are otherwise? When do you learn to live for yourself?
+
+Owning a decision is a powerful, heady thing, even if it’s a really stupid decision. Tattoos, piercings, boyfriends, whatever. “I will what I want.”
+#+end_quote
+
+* The creation and maintenance of scenes
+#+begin_quote
+*Any small group of people loosely-but-truly aligned on something can create powerful vectors by producing public-facing work that's directed at each other.*
+
+I’m talking about the creation of scenes, basically.
+
+A lot of scenes falter because the alignment isn't sufficiently "true", and because there aren't enough good people who know how to hold it together.
+#+end_quote
+
+* Managing disagreements requires context-sensitivity
+#+begin_quote
+Disagreements between thoughtful friends who respect each other can lead to everybody doing a whole bunch of reading, learning a lot more about a topic, and coming away feeling closer to each other than before – because they each now see better where the other coming from.
+
+Roughly between ages 13 and 23 I was thoroughly convinced that the best thing an intelligent person could do is to get obsessively good at evaluating and crafting sound arguments. Rationality! Debate! Wisdom!
+
+I rearranged a lot of my life around that wishful ideal: that any obstacle can be solved with a sufficiently sophisticated argument.
+
+The past few years have convinced me that I’ve been fundamentally mistaken.
+
+Let me try to explain why:
+1. An argument, however sophisticated, is always constructed within some context. (A therefore B, assuming X, Y and Z…).
+2. The moment you start getting invested in the arguments you’re constructing, you begin to get blinded to the world outside of your context. It’s like how you tune out everything else when you’re trying to perform a precise task.
+  - 2b. If you’re earnest, you might try to have a model of not-your-context. But it’s always going to be simplified because of cognitive limitations… as well as some more subtle, insidious reasons. To get a little ahead of myself, every in-group has an oversimplified model of its corresponding out-group. To go a step further- if you MUST argue, it’s prudent to start by trying to model your opponent’s context, as accurately as possible.
+3. When you get it right, you’ll get tremendous validation from other people who share your context. This feels very, very good, and is very, very habit-forming.
+  - 3b. This is so habit-forming, in fact, I think it’s outright addictive. I think once you get into the habit of fighting for your in-group, you begin subconsciously looking for opportunities to fight for your in-group. There are few drugs as sweet as peer validation. And it’s not necessarily a bad thing; a lot of the greatest things about humanity were motivated by peer validation.
+4. Sometimes you’ll win over people who are in adjacent, overlapping contexts – and these few instances are held up as glorious victories. You will cherish these. But these people were usually more or less already exploring your context to begin with. To put it very crudely, it’s like hunting docile rather than wild animals.
+5. Once you start hanging out with people in the same context, there’s a sort of natural radicalization that happens. It’s not malicious; it’s almost ‘physics’ – the most attention gets naturally funnelled to the most egregious mistakes made by people outside of the context. So there’s a sort of ‘gravity’ that ‘pulls’ everyone closer to the ‘center’. The most radical members spend the most time in it, influence it the most, etc etc.
+6. Now you have an in-group and an out-group. This is almost always bad news. The “sound arguments” are now almost entirely subservient to the group needs. The gravity is too strong, it bends the light, and almost nobody realizes this. The people who do realize this will typically be ousted from the group, or quietly leave themselves. More radicalization.
+7. The primary way each group interacts with the other is by focusing on the absolute worst outliers of the other group. As SMBC said, “every group is some % crazy assholes“. Every group in turn holds up the outgroup’s crazy asshole as a sort of threatening bogeyman. (Of course, this doesn’t mean that all crazy assholes are equally bad or not-bad. Some crazies cause serious harm to other people.)
+8. When a ‘normal’ member of the group encounters the other group, and gets caricatured as the bogeyman, their response is naturally to get upset. They might try to argue for a while, but whatever argument they come up with, however sound or calm, can always be framed as “lol why u mad tho”. You can’t argue your way out of that one, the only way to win is not to play. (Or to win some other game OUTSIDE the narrow context you’re currently stuck in).
+9. The vast majority of each group then ends up being highly suspicious of one another. As a result, they end up barely ever having real conversations with the other. Their contexts are so different that they might as well literally be speaking different languages entirely. (And in fact, if you pay careful attention, they always are. Every in-group develops its own language.)
+10. The only way out of this mess, as far as I can tell, is to avoid labels, avoid in-groups, and to try and make sense of each issue independently. Don’t let your in-group identities precede you. And always be wary whenever you find yourself trying to argue with someone.
+11. The challenge with #10 is to genuinely, legitimately suspend judgement. You do this by realizing that your judgement is necessarily limited because it’s formulated within a specific context, and that the world is always bigger than your context.
+12. If you’re good at doing 10 and 11, you will cease to be surprised or shocked by things like Brexit or Trump or any other supposedly outrageous phenomenon. The surprise mainly happens because you’re heavily invested in your context – the friends you talk to, the media you read, so on and so forth.
+13. Let me try to return to the starting point – why I think I’m mistaken. I used to believe that the way to winning people over, to making friends, to earning respect, receiving validation, serving the world, etc – was to get really good at debate, at arguments. The idea there was that if you get good at it, you’ll get closer to the truth.
+14. The reality of it, however, is that you get very good at a very narrow subset of things. You just don’t see it because you’re so focused on it that the map becomes the territory for you. You become the person who understands the map better than anybody else, but then someday you’ll follow your map right off a cliff – because the map isn’t the territory, and it can never be.
+15. It is much more difficult – and far more useful – to learn to identify the context that you’re in, and to ask yourself if that’s the context that you actually want to be in. If that’s the best context for you.
+16. It’s exceptionally difficult because it requires relinquishing the validation that you’ve been conditioned to enjoy from arguing on behalf of your in-group. It requires (at least it did for me) a sort of self-imposed exile. In my experience, this is actually harder than quitting smoking. And it makes sense that it would be.
+17. Actually, come to think of it, a lot of the frustration, ennui, listlessness, etc that I’ve faced in the past 3-4 years has been largely caused by discovering that so much of what I had invested myself into was really some narrow game or other. Consider, for example, once you’re an adult, how silly teenagers seem when they get all caught up in their drama.
+18. To the teenagers, of course, it’s not silly at all. Their context is all they know. If you mock your child for being frustrated by his “trivial” context (when you’re being frustrated by your much larger context), don’t be surprised if he decides that you don’t understand him. Because you don’t.
+
+TL;DR:
+
+Contexts, man. Context is everything. Everybody’s is different. Yours will change sooner or later whether you like it or not. When you recognize this, you don’t need to argue so much. But of course you can’t force this perspective down anybody’s throat.
+
+Also – arguments aren’t bad things. They’re tools. The important thing is to use the right tool for the job.
+#+end_quote
+
+* How I deal with my [[file:20210215110428-adhd.org][ADHD]]
+:PROPERTIES:
+:ID:       A0DA5E76-8120-45B9-BD2D-880E3B27F78A
+:END:
+[[https://twitter.com/visakanv/status/1169987062369439745][Kids in my DMs with ADHD symptoms are always surprised]] when I tell them that I don't think they should try to suppress their mind's wild swings. My advice is to develop the practice of taking meticulous notes instead. It worked for many prolific individuals throughout history.
+
+To have ADHD, in my view, is to be blessed & cursed to be the custodian of a wild trickster spirit who refuses to be tamed, broken, refuses to obey anybody else's directions – including your own. You can't win, so you might as well accept your fate and go along for the ride.
+
+Which isn't to say that you don't have to care about your worldly responsibilities. you do. That's the curse part. The trickster doesn't cooperate, or live on your schedule, but you have to clean up their messes. *Accepting this can be painful, but that's what growing up is.*
+
+But if you take care of your shit, if you don't get grumpy and upset and grovel, if you *don't resent the wild child inside you* – then you get to experience the blessing. and the blessing is that they will lead you on the grandest adventures that other people can't even imagine.
+
+Don't beat yourself up, don't thrash about – that'll likely make it worse. Try to relax. try to believe. You might be different from all your peers, but you are not alone. you are not broken or spoiled. Others have been on this journey before, and they are some of humanity's best.
+
+[[https://twitter.com/visakanv/status/1076189213744291840][I’ve basically taught myself to manage my ADHD with notes and threads.]] My “schedule intelligence” (deadlines, calendars, checklist) is terrible but my recognition and web-jumping is fantastic, so I spent something like a decade using the latter to build an elaborate mind-palace
+
+If you’re like me, keep meticulous notes of whatever you do when you’re procrastinating. I think of it as “deep-self-directed work”. If you’re going to watch trashy movies then write down your thoughts after watching each movie. It’ll come in handy in ways you least expect
+
+To me, the most critical part of becoming “so good they can’t ignore you” is to be “so prolific you don’t recognise yourself”. Once you cross that threshold you can actually look at your own work with a relatively objective, critical eye.
+
+People are sometimes surprised to hear how agnostic and indifferent I am to specific methods, formats, tools. The only thing that really matters to me is a sense of flow and throughput through the entire pipeline.
+
+Getting lost is a feature not a bug, the only real problem is getting jammed.
+
+[[https://twitter.com/visakanv/status/1062324957902888961][Here’s a quick sketch of my personal (ideal) style:]]
+
+Move fast, hit hard, wipe quick and move on to the next thing, but be micro-rigorous in making sure that each new thing quickly considers all past things, and is threaded accordingly.
+
+my biggest weakness at the moment is actually "wipe quick" – I sit with half-done things for too long, but the real problem isn't that they're half-done, but that they're not properly threaded.
+
+Properly-threaded half-dones are *fine*. Lingering on a half-done for too long is not. By "properly threaded" I mean contextualized against everything else that I'm doing, plotted on the map of my body of work.
+
+All of life is a set of projects, run in elaborate configurations of both series & parallel. There are many ways to play it. Loosely it seems like the smart thing to do is to increase your output (empower yourself) & reduce net resistance (unshackle yourself), so you can do more.
+
+There IS a situation where increasing output or reducing resistance might not be the smart thing to do – it's when you're using that additional net power to do things you don't actually want to do. climbing the wrong trees, doing more projects that don't actually serve you.
+
+(But usually that increased capacity / reduced resistance is something that serves you long term, so if you got stronger in order to achieve X, and X is stupid, you can still use your newfound strength to then achieve Y, which might be less stupid. Don't overthink this.)
+
+Shower thought: what's the single most important project in my life right now? and what came to mind was "unshackling myself further". What are the current shackles, & how do I break them? & what will I do after?
+
+Classes of shackles (note how similar this is to [[file:20210215110756-adhd_pro_book.org][ADHD Pro (book)]]:
+- limiting beliefs & assumptions
+- meatbag status (health)
+- outdated habits & coping mechanisms
+- immediate environment
+- peer group
+- financial situation
+- information diet
+- social reality
+
+they're all connected, which is why they're hard to break.
+Some parts of social reality are very hard to escape. For example, as long as I'm a male Singaporean citizen, every year or so I have to put on my army uniform and go for military reservist training for a week or two. Trying to break this shackle is super costly; it’s better to simply cope.
+On the other hand, limiting beliefs are sometimes shackles that you can shake off just by finding out what they are. Sometimes they wither away upon contact with awareness. Sometimes they reveal themselves to be malignant and persistent, and may require invasive psycho-surgery.
+93

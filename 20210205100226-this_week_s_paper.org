@@ -3,3 +3,5 @@
 :END:
 #+title: This Week's Paper
 [[file:20210206161400-public_notes.org][Public Notes]]
+
+[[id:415568A5-8879-4411-8076-322B4E4FB727][PANNs: Large-Scale Pretrained Audio Neural Networks for Audio Pattern Recognition]]
