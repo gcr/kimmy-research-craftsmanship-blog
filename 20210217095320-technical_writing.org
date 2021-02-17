@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       75B24204-32CF-491D-94F1-5106ABE4BC43
+:END:
+#+title: Technical Writing
+[[file:20210206161400-public_notes.org][Public Notes]]
+
+I've been listening to the U Chicago Writing Lab's class on "the craft of writing effectively" and it's got me thinking about the theory of power in writing.
+https://www.youtube.com/watch?v=vtIzMaLkCaM
+
+Their program for building influential, /valuable/ writing is:
+- Find who has power in your community
+- Write what they want to hear, WHILE ALSO challenging them in a /valuable/ way.
+
+- How can we center Influence in the hands of marginalized groups of writers? :: It makes me think of [[file:20210217091233-dual_power.org][Dual Power]] frameworks
+
+- On Timnit's firing ::
