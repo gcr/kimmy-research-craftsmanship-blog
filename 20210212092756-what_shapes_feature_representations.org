@@ -1,2 +1,12 @@
+:PROPERTIES:
+:ID:       02BB02FA-9FA2-4642-A93A-D4A045CB00F4
+:END:
 #+title: What shapes feature representations?
-[[file:20210126165725-papers.org][Papers]], [[id:CAC3907B-031D-42F8-86BA-85FF61706906][Andreas reading group]], [[file:20210206161400-public_notes.org][Public Notes]]
+[[file:20210126165725-papers.org][Papers]], [[id:CAC3907B-031D-42F8-86BA-85FF61706906][Andreas reading group]], [[file:20210206161400-public_notes.org][Public Notes]], [[id:6A358D57-0526-488B-9E2F-A98E42D3562D][Texture Bias in CNNs]]
+
+*What shapes feature representations? Exploring datasets, architectures, and training*, Katherine L. Hermann, Andrew K. Lampinen
+https://arxiv.org/abs/2006.12433
+
+#+begin_quote
+In naturalistic learning problems, a model's input contains a wide range of features, some useful for the task at hand, and others not. Of the useful features, which ones does the model use? Of the task-irrelevant features, which ones does the model represent? Answers to these questions are important for understanding the basis of models' decisions, as well as for building models that learn versatile, adaptable representations useful beyond the original training task. We study these questions using synthetic datasets in which the task-relevance of input features can be controlled directly. We find that when two features redundantly predict the labels, the model preferentially represents one, and its preference reflects what was most linearly decodable from the untrained model. Over training, task-relevant features are enhanced, and task-irrelevant features are partially suppressed. Interestingly, in some cases, an easier, weakly predictive feature can suppress a more strongly predictive, but more difficult one. Additionally, models trained to recognize both easy and hard features learn representations most similar to models that use only the easy feature. Further, easy features lead to more consistent representations across model runs than do hard features. Finally, models have greater representational similarity to an untrained model than to models trained on a different task. Our results highlight the complex processes that determine which features a model represents.
+#+end_quote

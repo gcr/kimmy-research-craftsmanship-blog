@@ -2,6 +2,14 @@
 :ID:       BA655B99-2B2E-4260-B96E-A9C0B2C88FEB
 :END:
 #+title: The origin and prevelance of texture bias in CNNs
-[[file:20210126165725-papers.org][Papers]], [[id:CAC3907B-031D-42F8-86BA-85FF61706906][Andreas reading group]], [[file:20210206161400-public_notes.org][Public Notes]]
+[[file:20210126165725-papers.org][Papers]], [[id:CAC3907B-031D-42F8-86BA-85FF61706906][Andreas reading group]], [[file:20210206161400-public_notes.org][Public Notes]], [[id:6A358D57-0526-488B-9E2F-A98E42D3562D][Texture Bias in CNNs]]
 
-Followup: [[file:20210212092756-what_shapes_feature_representations.org][What shapes feature representations?]]
+*The Origins and Prevalence of Texture Bias in Convolutional Neural Networks*, Katherine L. Hermann, Ting Chen, Simon Kornblith
+https://arxiv.org/abs/1911.09071
+
+Followup by the same authors: [[file:20210212092756-what_shapes_feature_representations.org][What shapes feature representations?]]
+
+* Abstract
+#+begin_quote
+Recent work has indicated that, unlike humans, ImageNet-trained CNNs tend to classify images by texture rather than by shape. How pervasive is this bias, and where does it come from? We find that, when trained on datasets of images with conflicting shape and texture, CNNs learn to classify by shape at least as easily as by texture. What factors, then, produce the texture bias in CNNs trained on ImageNet? Different unsupervised training objectives and different architectures have small but significant and largely independent effects on the level of texture bias. However, all objectives and architectures still lead to models that make texture-based classification decisions a majority of the time, even if shape information is decodable from their hidden representations. The effect of data augmentation is much larger. By taking less aggressive random crops at training time and applying simple, naturalistic augmentation (color distortion, noise, and blur), we train models that classify ambiguous images by shape a majority of the time, and outperform baselines on out-of-distribution test sets. Our results indicate that apparent differences in the way humans and ImageNet-trained CNNs process images may arise not primarily from differences in their internal workings, but from differences in the data that they see.
+#+end_quote

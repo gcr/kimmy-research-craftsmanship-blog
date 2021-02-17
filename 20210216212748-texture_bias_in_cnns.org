@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       6A358D57-0526-488B-9E2F-A98E42D3562D
+:END:
+#+title: Texture Bias in CNNs
+[[id:CAC3907B-031D-42F8-86BA-85FF61706906][Andreas reading group]], [[file:20210206161400-public_notes.org][Public Notes]]
+
+There's a series of papers on this:
+- (2018) [[id:861E98A0-5A8C-447C-B5B9-FD14B2E5FBBE][ImageNet CNNs are biased towards texture]]
+- (2019) [[id:BA655B99-2B2E-4260-B96E-A9C0B2C88FEB][The origin and prevelance of texture bias in CNNs]]
+- (2020) [[file:20210212092756-what_shapes_feature_representations.org][What shapes feature representations?]]
+
+- Are CNNs biased towards texture? ::
+  At first, we thought that CNNs captured shape. In fact, the 2018 paper writes:
+  #+begin_quote
+ Ritter et al. (2017) discovered that CNNs develop a so-called “shape bias” just like children, i.e. that object shape is more important than colour for object classification (although see Hosseini et al. (2018) for contrary evidence). Furthermore, CNNs are currently the most predictive models for human ventral stream object recognition (e.g. Cadieu et al., 2014; Yamins et al., 2014); and it is well-known that object shape is the single most impor- tant cue for human object recognition (Landau et al., 1988), much more than other cues like size or texture.
+  #+end_quote
+  But nowadays most CNNs seem to capture pretty exclusively texture.
+
+  Evidence for texture bias:
+  - Gatys et al. (2015): a linear classifier on top of a CNN's texture representation gets really good performance
+
+  - Brendel & Bethge (2019):
