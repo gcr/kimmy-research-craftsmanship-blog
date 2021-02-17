@@ -17,3 +17,12 @@ Then use the following shell script!
 #+begin_src shell
 osascript -e 'the clipboard as «class HTML»' | perl -ne 'print chr foreach unpack("C*",pack("H*",substr($_,11,-3)))' | pandoc -f html-auto_identifiers --lua-filter ~/.pandoc-filter-strip-styles.lua --wrap=none -t org
 #+end_src
+
+And finally, use the following command in your emacs:
+#+begin_src elisp
+  (defun org-paste-from-rich-html ()
+    (interactive)
+    (shell-command
+     "osascript -e 'the clipboard as «class HTML»' | perl -ne 'print chr foreach unpack(\"C*\",pack(\"H*\",substr($_,11,-3)))' | pandoc -f html-auto_identifiers --lua-filter ~/.pandoc-filter-strip-styles.lua --wrap=none -t org"
+     t))
+#+end_src
