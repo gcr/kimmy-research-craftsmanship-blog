@@ -46,7 +46,7 @@ You don't want to confuse the two. [[id:0649B00B-8183-484E-B024-F0F12806D196][Re
 - *Lack of context:* Performance improvement compared to /what/? What was XYZ
 - *Not an overview/summary:* prose is harder to skim than a table or graph.
 
- When you're doing [[file:20210206115228-technical_writing.org][Technical Writing]], you're really packaging your results and ideas into an easily-digestible format, kind of like a Protobuf for other humans. Think of [[file:20210206115549-sending_notes_to_yourself_in_the_future.org][Notetaking as forwarding ideas to your future self]]. This can be helpful when communicating ideas to others, but outputs of runs should be *machine-readable first*, so you can interpret them in new ways.
+ When you're doing [[id:75B24204-32CF-491D-94F1-5106ABE4BC43][Technical Writing]], you're really packaging your results and ideas into an easily-digestible format, kind of like a Protobuf for other humans. Think of [[file:20210206115549-sending_notes_to_yourself_in_the_future.org][Notetaking as forwarding ideas to your future self]]. This can be helpful when communicating ideas to others, but outputs of runs should be *machine-readable first*, so you can interpret them in new ways.
 
  *The paragraph conflates the purpose of the experiment journal with that of the [[id:0649B00B-8183-484E-B024-F0F12806D196][Research journals]].*
 

@@ -4,6 +4,8 @@
 #+title: Technical Writing
 [[file:20210206161400-public_notes.org][Public Notes]]
 
+Probably the most important part of [[id:33013B29-EFA3-4A53-9E1C-8F7E222B9F82][Research Craftsmanship]], since as a researcher, *more than half of your job is effectively communicating what you do.*
+
 I've been listening to the U Chicago Writing Lab's class on "the craft of writing effectively" and it's got me thinking about the theory of power in writing.
 https://www.youtube.com/watch?v=vtIzMaLkCaM
 
