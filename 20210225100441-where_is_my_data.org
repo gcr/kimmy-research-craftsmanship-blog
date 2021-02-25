@@ -1,0 +1,24 @@
+#+title: Where is my data?
+#+roam_alias: "Data Storage for Kimmy"
+[[file:20210206161400-public_notes.org][Public Notes]]
+
+| Asset                | Easy-to-access | Archival                        | Last Archival Date |
+|----------------------+----------------+---------------------------------+--------------------|
+| Videos               | GDrive         |                                 |                    |
+| Documents            | GDrive         |                                 |                    |
+| Daypages             | Local          | KB                              |                    |
+| Passwords            | 1p             | 1p recovery key in my blue file |                    |
+| 2FA recovery tokens  |                |                                 |                    |
+| Apple File Vault key |                |                                 |                    |
+| Time Machine         | USB Passport   |                                 |                    |
+| Mail backup          | gmail          | local -> tarsnap                |                    |
+|----------------------+----------------+---------------------------------+--------------------|
+| *Datasets:*            |                |                                 |                    |
+| Food-100             |                |                                 |                    |
+| Full BAM             |                | se3 cluster                     |                    |
+| Lagerfeld            |                | GCP                             |                    |
+| CUB                  |                |                                 |                    |
+
+* Archival tasks
+- Copy GCP buckets to local USB disk (currently ~$50/month cost)
+-
