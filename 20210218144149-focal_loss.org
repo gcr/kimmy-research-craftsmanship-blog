@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       73F133E9-DEE9-4133-8482-4DC73C79E8EA
+:END:
+#+title: Focal loss
+[[file:20210206161400-public_notes.org][Public Notes]], [[file:20210126165725-papers.org][Papers]], [[id:5D9B7C82-5E1A-4BAF-8C88-4A2C7ECF2A8C][This Week's Paper]]
+
+[[file:20210202230416-ml_audio_project_home.org][ML Audio project (Home)]]
+
+- Interesting because it tweaks the BCE loss function to not have the tail be so repressed

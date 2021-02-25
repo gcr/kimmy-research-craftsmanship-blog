@@ -1,6 +1,18 @@
 #+title: Emacs init file references
 [[file:20210206161400-public_notes.org][Public Notes]]
 
+
+#+begin_src elisp
+  (setq-default org-babel-default-header-args:sh '((:results . "none")))
+  ;;(add-to-list 'org-src-lang-modes '("term" . sh))
+  (defun org-babel-execute:sh (body params)
+    (let ((b64-body (base64-encode-string (string-trim body) t)))
+      (call-process "osascript" nil nil nil "-e"
+                    (format "tell application \"iTerm\" to tell current session of current window to if is at shell prompt then write text \" commandline (stty -echo; head -n1|base64 -d)\n%s\"" b64-body))
+      (call-process "osascript" nil nil nil "-e"
+                    "tell application \"iTerm\" to activate")))
+#+end_src
+
 #+BEGIN_SRC elisp
 
 ;;; -*- eval: (progn (hs-minor-mode) (evil-close-folds)) -*-
