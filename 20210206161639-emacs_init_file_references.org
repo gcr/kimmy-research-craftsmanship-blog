@@ -1,20 +1,7 @@
 #+title: Emacs init file references
 [[file:20210206161400-public_notes.org][Public Notes]]
 
-
 #+begin_src elisp
-  (setq-default org-babel-default-header-args:sh '((:results . "none")))
-  ;;(add-to-list 'org-src-lang-modes '("term" . sh))
-  (defun org-babel-execute:sh (body params)
-    (let ((b64-body (base64-encode-string (string-trim body) t)))
-      (call-process "osascript" nil nil nil "-e"
-                    (format "tell application \"iTerm\" to tell current session of current window to if is at shell prompt then write text \" commandline (stty -echo; head -n1|base64 -d)\n%s\"" b64-body))
-      (call-process "osascript" nil nil nil "-e"
-                    "tell application \"iTerm\" to activate")))
-#+end_src
-
-#+BEGIN_SRC elisp
-
 ;;; -*- eval: (progn (hs-minor-mode) (evil-close-folds)) -*-
 
 (progn "Initialize package-system..."
@@ -37,27 +24,29 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(auto-save-file-name-transforms '((".*" "~/.emacs-temp/\\1" t)))
- '(backup-directory-alist '((".*" . "~/.emacs-temp/")))
- '(browse-url-browser-function 'browse-url-generic)
+ '(auto-save-file-name-transforms (quote ((".*" "~/.emacs-temp/\\1" t))))
+ '(backup-directory-alist (quote ((".*" . "~/.emacs-temp/"))))
+ '(browse-url-browser-function (quote browse-url-generic))
  '(current-language-environment "UTF-8")
  '(doc-view-resolution 200)
  '(eshell-buffer-shorthand t)
- '(evil-search-module 'isearch)
+ '(evil-search-module (quote isearch))
  '(evil-snipe-repeat-keys nil)
  '(evil-snipe-smart-case t)
  '(evil-want-C-d-scroll nil)
  '(evil-want-C-u-scroll nil)
- '(flycheck-indication-mode 'left-fringe)
+ '(flycheck-indication-mode (quote left-fringe))
  '(haskell-mode-hook
-   '(turn-on-haskell-indent turn-on-haskell-indentation turn-on-font-lock))
+   (quote
+    (turn-on-haskell-indent turn-on-haskell-indentation turn-on-font-lock)))
  '(helm-external-programs-associations
-   '(("pptx" . "loimpress")
+   (quote
+    (("pptx" . "loimpress")
      ("pdf" . "open")
-     ("odp" . "loimpress")))
+     ("odp" . "loimpress"))))
  '(ido-enable-tramp-completion t)
- '(ido-enter-matching-directory 'only)
- '(ido-use-filename-at-point 'guess)
+ '(ido-enter-matching-directory (quote only))
+ '(ido-use-filename-at-point (quote guess))
  '(inhibit-startup-screen nil)
  '(js2-auto-indent-p t)
  '(js2-basic-offset 2)
@@ -73,9 +62,10 @@
  '(nxml-slash-auto-complete-flag t)
  '(org-startup-indented t)
  '(package-selected-packages
-   '(company-statistics delve-minor-mode delve lister quelpa-use-package quelpa counsel ivy olivetti impatient-mode org-roam-server org-ehtml anki-editor direnv pocket-reader deft org-roam helm-ls-git helm-rg helm-cmd-t cmake-mode livescript-mode dumb-jump evil-magit evil-collection org-bullets ewal-spacemacs-themes spacemacs-theme org-superstar evil-surround org-rich-yank evil-indent-plus delight moe-theme helm lua-mode markdown-mode emmet-mode rainbow-mode web-mode auctex coffee-mode js2-mode magit company ace-jump-mode evil use-package))
- '(safe-local-variable-values '((eval progn (hs-minor-mode) (evil-close-folds))))
- '(send-mail-function 'sendmail-send-it))
+   (quote
+    (htmlize lister quelpa-use-package quelpa olivetti-mode dumb-jump livescript-mode olivetti counsel helm-swoop ivy-avy ivy org-roam-server pocket-reader consult consult-ripgrep org-roam helm-ls-git helm-rg helm-cmd-t volatile-highlights org-variable-pitch evil-lion evil-snipe evil-avy avy ewal-spacemacs-themes spacemacs-theme org-superstar evil-surround org-rich-yank evil-indent-plus delight moe-theme helm lua-mode markdown-mode emmet-mode rainbow-mode web-mode auctex coffee-mode js2-mode magit company ace-jump-mode evil use-package)))
+ '(safe-local-variable-values (quote ((eval progn (hs-minor-mode) (evil-close-folds)))))
+ '(send-mail-function (quote sendmail-send-it)))
 
 ;; (custom-set-faces
 ;;  ;; custom-set-faces was added by Custom.
@@ -467,6 +457,7 @@
   (add-hook 'org-mode-hook 'visual-line-mode 'append)
   (add-hook 'org-mode-hook 'prettify-symbols-mode 'append)
   (setq org-fontify-done-headline nil)
+
   (require 'org-agenda)
 
   (setq org-todo-keywords
@@ -809,6 +800,36 @@ same directory as the org-buffer and insert a link to this file."
   ;;                :protocol "daypage"
   ;;                :function gcr-jump-to-daypage))
 
+  (setq-default org-babel-default-header-args:sh '((:results . "none")))
+  (setq-default org-confirm-babel-evaluate nil)
+  ;;(add-to-list 'org-src-lang-modes '("term" . sh))
+  (defun org-babel-execute:sh (body params)
+    "Insert the current babel block into the fish command line, ready to run"
+    (let ((b64-body (base64-encode-string (string-trim body) t)))
+      (call-process "osascript" nil nil nil "-e"
+                    (format "tell application \"iTerm\" to tell current session of current window to write text \" commandline (stty -echo; head -n1|base64 -d)\n%s\n\"" b64-body))
+      ;;(call-process "osascript" nil nil nil "-e"
+      ;;              (format "tell application \"iTerm\" to tell current session of current window to write text \"%s\\nhi\"" b64-body))
+      (call-process "osascript" nil nil nil "-e"
+                    "tell application \"iTerm\" to activate")))
+
+  (defun org-paste-from-rich-html ()
+    (interactive)
+    (shell-command
+     "osascript -e 'the clipboard as «class HTML»' | perl -ne 'print chr foreach unpack(\"C*\",pack(\"H*\",substr($_,11,-3)))' | pandoc -f html-auto_identifiers --lua-filter ~/.pandoc-filter-strip-styles.lua --wrap=none -t org"
+     t))
+
+  (defun org-yank-iterm-history-to-src-block ()
+    "Insert the last-typed command from iTerm into the current org block, surrounding it with #+begin_src shell blocks. This makes it easy to edit the command in babel."
+    (interactive)
+    (call-process "osascript" nil nil nil "-e"
+                  "tell application \"iTerm\" to tell current session of current window to write text \" echo -en '\\\\x1b]1337;Copy=:'(echo $history[1]|base64 -w0)'\\\\x07'\"")
+    (message "Got stuff")
+    (set-mark (point))
+    (sleep-for 0.5)
+    (yank)
+    (org-insert-structure-template "src")
+    (insert "sh"))
 
   )
 
@@ -1068,10 +1089,10 @@ same directory as the org-buffer and insert a link to this file."
     (add-hook 'xref-backend-functions #'dumb-jump-xref-activate)
   )
 
-
 ;;(use-package solarized-theme
 ;;  :config
 ;;  (load-theme 'solarized-light t))
+
 
 (progn "Misc tweaks"
 
@@ -1153,6 +1174,7 @@ same directory as the org-buffer and insert a link to this file."
        (require 'uniquify) ; Better buffer names
        )
 
+
 (use-package delight
   ;; Hide things from the modeline
   :config
@@ -1199,13 +1221,14 @@ same directory as the org-buffer and insert a link to this file."
   ;;         above and below with smaller indentation
   :config
   (evil-indent-plus-default-bindings))
+(put 'downcase-region 'disabled nil)
 
 (use-package org-roam
       :ensure t
       :hook
       (after-init . org-roam-mode)
       :custom
-      (org-roam-directory "/Users/kimmy/notes/days/")
+      (org-roam-directory "/Users/kwilber/notes/days/")
       :bind (:map org-roam-mode-map
               (("C-c n l" . org-roam)
                ("C-c n f" . org-roam-find-file)
@@ -1214,7 +1237,9 @@ same directory as the org-buffer and insert a link to this file."
               (("C-c n i" . org-roam-insert))
               (("C-c i" . org-roam-insert))
               (("C-c n u" . org-roam-unlinked-references))
-              (("C-c n I" . org-roam-insert-immediate)))
+              (("C-c n I" . org-roam-insert-immediate))
+              (("C-c p" . org-yank-iterm-history-to-src-block))
+              )
       :config
       (setq org-roam-title-sources '((title) alias))
 
@@ -1266,7 +1291,7 @@ Org-mode properties drawer already, keep the headline and don’t insert
 
       ;; Completion-at-point
 
-      (global-company-mode)
+      (add-hook 'after-init-hook 'global-company-mode)
       (setq company-minimum-prefix-length 2)
       (setq company-idle-delay 0.25)
       (add-to-list 'company-backends 'company-capf)
@@ -1302,12 +1327,9 @@ Org-mode properties drawer already, keep the headline and don’t insert
         ("C-'" . ivy-avy)
         ("M-h" . ivy-previous-line)
         ("M-n" . ivy-next-line)
-        ;("M-t" . ivy-next-line)
         ("C-M-h" . ivy-previous-line-and-call)
         ("C-M-n" . ivy-next-line-and-call)
-        ("M-H" . ivy-previous-line-and-call)
-        ("M-N" . ivy-next-line-and-call)
-        ;("M-t" . ivy-call)
+        ("M-t" . ivy-call)
         )
   :config
   (ivy-mode 1)
@@ -1326,34 +1348,14 @@ Org-mode properties drawer already, keep the headline and don’t insert
   (setq ivy-wrap t)
   )
 (use-package counsel)
-(use-package company-statistics
-  :config
-  (company-statistics-mode))
 
-(use-package direnv
- :config
- (direnv-mode))
-
-(use-package olivetti-mode
+(use-package olivetti
   :config
   (setq olivetti-body-width 40))
 
-;; (use-package quelpa)
-;; (quelpa
-;;  '(quelpa-use-package
-;;    :fetcher git
-;;    :url "https://github.com/quelpa/quelpa-use-package.git"))
-;; (require 'quelpa-use-package)
-;; (use-package lister
-;;   :quelpa (lister :fetcher git
-;;   		  :url "https://github.com/publicimageltd/lister"))
-;; (use-package delve
-;;   :quelpa (delve :fetcher git
-;; 		 :url "https://github.com/publicimageltd/delve")
-;;   :config
-;;   (use-package delve-minor-mode
-;;     :config
-;;     (add-hook 'org-mode-hook #'delve-minor-mode-maybe-activate))
-;;   :bind
-;;   (("<f12>" . delve-open-or-select)))
-#+END_SRC
+
+(add-to-list 'load-path "/Users/kwilber/.emacs.d/vendor/lister-20201223.125")
+(add-to-list 'load-path "/Users/kwilber/.emacs.d/vendor/delve-20201225.1319")
+(require 'lister)
+(require 'delve)
+#+end_src
