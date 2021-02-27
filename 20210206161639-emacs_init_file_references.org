@@ -823,7 +823,7 @@ same directory as the org-buffer and insert a link to this file."
     "Insert the last-typed command from iTerm into the current org block, surrounding it with #+begin_src shell blocks. This makes it easy to edit the command in babel."
     (interactive)
     (call-process "osascript" nil nil nil "-e"
-                  "tell application \"iTerm\" to tell current session of current window to write text \" echo -en '\\\\x1b]1337;Copy=:'(echo $history[1]|base64 -w0)'\\\\x07'\"")
+                  "tell application \"iTerm\" to tell current session of current window to write text \" echo -en '\\\\x1b]1337;Copy=:'(echo \\\\#cd $PWD\\\\n$history[1]|base64 -w0)'\\\\x07'\"")
     (message "Got stuff")
     (set-mark (point))
     (sleep-for 0.5)
