@@ -1,0 +1,40 @@
+#+title: LaTeX crush stuff
+[[file:20210206161400-public_notes.org][Public Notes]]
+
+Incantation:
+
+% TeX crush stuff
+\makeatletter
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+                                   {-.8ex \@plus -2ex \@minus -.2ex}%
+                                   {.5ex \@plus.2ex}%
+                                   {\normalfont\large\bfseries\raggedright}}
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+                                   {-.6ex \@plus -2ex \@minus -.2ex}%
+                                   {.5ex \@plus.2ex}%
+                                   {\normalfont\large\bfseries\raggedright}}
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+                                     {-.5ex\@plus -.2ex \@minus -.2ex}%
+                                     {.2ex \@plus .2ex}%
+                                     {\normalfont\large\bfseries\raggedright}}
+
+%\abovedisplayskip=3pt plus 3pt minus 3pt
+%\abovedisplayshortskip=2pt plus 3pt
+%\belowdisplayskip=3pt plus 3pt minus 2pt
+%\belowdisplayshortskip=2pt plus 3pt minus 2pt
+
+\abovedisplayskip=3pt plus 3pt minus 3pt
+
+\abovedisplayshortskip=2pt plus 3pt
+\belowdisplayskip=3pt plus 3pt minus 2pt
+\belowdisplayshortskip=2pt plus 3pt minus 2pt
+
+\floatsep 4pt plus 2pt minus 2pt
+\textfloatsep 4pt plus 2pt minus 4pt
+\intextsep 6pt plus 2pt minus 2pt
+\dblfloatsep 4pt plus 2pt minus 2pt
+\dbltextfloatsep 4pt plus 2pt minus 4pt
+\@fptop 0pt plus 1fil \@fpsep 4pt plus 2fil \@fpbot 0pt plus 1fil
+\@dblfptop 0pt plus 1fil \@dblfpsep 4pt plus 2fil \@dblfpbot 0pt plus 1fil
+
+\makeatother
